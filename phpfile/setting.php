@@ -24,7 +24,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.min.js"></script>
 
 	<!-- Link the HTML with CSS -->
-	<link rel="stylesheet" href="settingstyle.css" type="text/css">
+	<link rel="stylesheet" href="../css/settingstyle.css" type="text/css">
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
 
@@ -49,7 +49,7 @@
 			<a href="setting.php"><button id="Abtn"> SETTINGS </button></a>
 		</div>
 		<div id="A6">
-			<a href='mainpage.html'><button id="Abtn" name="logout"> LOGOUT </button></a>
+			<a href='logout.php'><button id="Abtn" name="logout"> LOGOUT </button></a>
 		</div>
 	</div>
 

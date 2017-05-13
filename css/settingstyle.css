@@ -43,7 +43,7 @@ button{
     border: none;
     width: 15%;
     font-family: 'PT-Serif', serif;
-    background-image: url(dashboard.png);
+    background-image: url(../images/dashboard.png);
     background-size: 50px;
     background-repeat: no-repeat;
     background-position: center 15px;
@@ -53,7 +53,7 @@ button{
 
 #A2{
     color: white;
-    background-image: url(searchimage.png);
+    background-image: url(../images/searchimage.png);
     border: none;
     width: 15%;
     font-family: 'PT-Serif', serif;
@@ -65,7 +65,7 @@ button{
 
 #A3{
     color: white;
-    background-image: url(graph.png);
+    background-image: url(../images/graph.png);
     border: none;
     width: 15%;
     font-family: 'PT-Serif', serif;
@@ -78,7 +78,7 @@ button{
 
 #A4{
     color: white;
-    background-image: url(book2.png);
+    background-image: url(../images/book2.png);
     border: none;
     width: 15%;
     font-family: 'PT-Serif', serif;
@@ -90,7 +90,7 @@ button{
 
 #A5{
     color: white;
-    background-image: url(setting.png);
+    background-image: url(../images/setting.png);
     border: none;
     width: 15%;
     font-family: 'PT-Serif', serif;
@@ -102,7 +102,7 @@ button{
 
 #A6{
     color: white;
-    background-image: url(arrow.png);
+    background-image: url(../images/arrow.png);
     border: none;
     width: 15%;
     font-family: 'PT-Serif', serif;

@@ -34,7 +34,7 @@
 <body>
 <!-- Creating an account -->
 <div id="account">
-	<h1> Login </h1>
+	<h1> LOGIN </h1>
 
 	<!-- Creating input form -->
 	<!-- 'name' tag is used later for SQL -->

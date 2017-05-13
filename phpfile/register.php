@@ -63,7 +63,7 @@
 
 	    	<!-- ________________________________ FIRST DIV SHOWN ______________________________________-->
 		    <div id="account">
-		    	<h1>Create an account</h1>
+		    	<h1>Register</h1>
 			    <div>
 					<label for="username"> Username: </label>
 			    	<input class="form-control" type="text" placeholder="johndoe123" name="username" required />

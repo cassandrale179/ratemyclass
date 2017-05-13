@@ -192,19 +192,15 @@ if (isset($_SESSION['logged_in'])){
                 <br> Find a bug in the source code? You can notify us or contribute <a href="https://github.com/cassandrale179/ratemyclass/blob/master/CONTRIBUTING.md">here :) </a></p>
 
 
-                <p> Contact: <a href="mailto:lenguyetminh1998@gmail.com">lenguyetminh1998@gmail.com</a>
+                <p> Contact: <a href="mailto:mnl98x@gmail.com">mnl98x@gmail.com</a>
                 </p>
 
                 <ul class="list-inline banner-social-buttons">
                     <li>
-                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">FAQ</span></a>
+                        <a href="#" class="btn btn-default btn-lg"> <span class="network-name">FAQ</span></a>
                     </li>
                     <li>
-                        <a href="https://github.com/cassandrale179" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Privacy Policy</span></a>
-                    </li>
-                    <li>
-                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name"><
-                          /span></a>
+                        <a href="#" class="btn btn-default btn-lg"> <span class="network-name">Privacy Policy</span></a>
                     </li>
                 </ul>
 
@@ -216,7 +212,7 @@ if (isset($_SESSION['logged_in'])){
     <footer>
         <div class="container text-center">
             <p> Open source project on <a href="https://github.com/cassandrale179/ratemyclass/blob/master/README.md">GitHub</p></a>
-            Copyright &copy; RateMyClass 2017. <a href="#"></a> <a href="#"></a>
+            Copyright &copy; RateMyClass 2017. All rights reserved. <a href="#"></a> <a href="#"></a>
         </div>
     </footer>
 
