@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Yanone+Kaffeesatz');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300');
+
+body{
+    background-image: url(http://media.idownloadblog.com/wp-content/uploads/2016/08/iPad_Tablet_pure_minimal.png);
+    background-size: cover;
+    z-index: -3;
+    height: 2000px;
+
+}
+
+button{
+    outline: none;
+}
+
+input{
+    outline: none;
+}
+
+h1{
+    font-family: 'Noto Serif', sans-serif;
+    font-size: 60px;
+    color: #515A5A;
+    position: absolute;
+    margin-left: 28%;
+    animation: fadein 2s;
+}
+
+
+#A{
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+
+#A1{
+    background-image: url(../images/dashboard.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    height: 10%;
+    width: 50px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+#A2{
+    background-image: url(../images/searchimage.png);
+    background-size: 28px;
+    background-repeat: no-repeat;
+    height: 10%;
+    width: 50px;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+#A3{
+    background-image: url(../images/graph.png);
+    background-size: 28px;
+    background-repeat: no-repeat;
+    height: 10%;
+    width: 50px;
+    margin-left: 15px;
+    margin-top: 13px;
+}
+
+#A4{
+    background-image: url(../images/book2.png);
+    background-size: 28px;
+    background-repeat: no-repeat;
+    height: 10%;
+    width: 50px;
+    margin-left: 15px;
+    margin-top: 22px;
+}
+
+
+#A5{
+    background-image: url(../images/setting.png);
+    background-size: 28px;
+    background-repeat: no-repeat;
+    height: 10%;
+    width: 50px;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+#A6{
+    background-image: url(../images/arrow.png);
+    background-size: 28px;
+    background-repeat: no-repeat;
+    height: 10%;
+    width: 50px;
+    margin-left: 15px;
+    margin-top: 22px;
+}
+
+
+p{
+    color: white;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 10px;
+}
+
+
+
+#sortingbody{
+  background: black;
+}
+#E1{
+  margin-left: 20%;
+  margin-top: 120px;
+  position: absolute;
+}
+
+#E h1{
+  text-align: center;
+}
+
+#E1 button{
+  width: 600px;
+  background: rgba(0,0,0,0.1);
+  font-family: 'Roboto Condensed', sans-serif;
+  box-shadow: none;
+  border: none;
+  margin-bottom: 20px;
+  padding: 15px;
+  color: #626567;
+  font-size: 15px;
+
+}
