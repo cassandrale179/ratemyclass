@@ -1,7 +1,8 @@
-//-----------Function to redirect to page -----------
+//----------- global variables -----------
 var difficulty;
 var majorSort;
-var permanentString;
+
+//----------- function to redirect class page -----------
 function pageRedirect()
 {
   $('#mySelect').on('change', function() {
@@ -14,17 +15,20 @@ function pageRedirect()
     	return this.value === first;
   }
   	if($("#classes option").filter(myfilter).length){
-    		majorSort = first;
-  			majorSort = majorSort.toString().replace(/ /g, '');
+        var matches = first;
+        var regExp = /\(([^)]+)\)/;
+        majorSort = regExp.exec(matches)[1];
     }
   });
 
   $(document).ready(function () {
           $("#btnSave").click(
               function () {
-                  $(location).attr("href", "../majorsort/" + majorSort + ".php");
+                  $(location).attr("href", "../majorsort/page.php");
                   permanentString = difficulty;
+                  permanentString2 = majorSort;
                   localStorage.setItem("permanentString", permanentString);
+                  localStorage.setItem("permanentString2", permanentString2);
               }
           );
    });
@@ -43,6 +47,7 @@ function sortClass(){
 
   //-----------Get local storage value----------
   var permDifficulty = localStorage.getItem("permanentString");
+  var permMajorSort = localStorage.getItem("permanentString2");
 
   //-----------send an AJAX request-----------
   var request = new XMLHttpRequest();
@@ -116,8 +121,6 @@ function sortClass(){
       })
 
 
-
-
       //--------------------Mapping function--------------------
       for (var l = 0; l < avgArray.length; l++){
         for (var m = 0; m < oldArray.length; m++){
@@ -127,12 +130,11 @@ function sortClass(){
         }
       }
 
-
       //Creating an array that holds only class which belong to the specified major
       var majorArray = [];
       var majorScore = [];
       for (var p = 0; p < classArraySort.length; p++){
-        if (classArraySort[p].substring(0, classArraySort[p].length - 3) == majorName){
+        if (classArraySort[p].substring(0, classArraySort[p].length - 3) == permMajorSort){
           majorArray.push(classArraySort[p]);
           majorScore.push(newArray[p]);
         }
@@ -147,7 +149,13 @@ function sortClass(){
       }
 
 
-      //--------------------Displaying The Sorted Class on HTML Page --------------------
+      //-------------------- If no local storage value is set --------------------
+      if (permDifficulty == "undefined" || permMajorSort == "undefined"){
+        alert ("Please click on sorting to sort your class");
+      }
+
+
+      //--------------------Displaying Easy Class First --------------------
       if (permDifficulty == "Easy"){
         for (var n = 0; n < majorArray.length; n++){
           var text = "<a href='../class/" + majorArray[n] + ".php'><button style='border-left: 50px solid" + colorArray[n] + "'> <b>" + majorArray[n] + " </b>(Average: " + majorScore[n] + ")</button></a><br>";
@@ -155,6 +163,7 @@ function sortClass(){
         }
       }
 
+        //--------------------Displaying Hard Class First --------------------
       if (permDifficulty == "Difficult"){
         for (var n = majorArray.length-1; n >= 0; n--){
           var text = "<a href='../class/" + majorArray[n] + ".php'><button style='border-left: 50px solid" + colorArray[n] + "'> <b>" + majorArray[n] + " </b>(Average: " + majorScore[n] + ")</button></a><br>";
@@ -164,6 +173,5 @@ function sortClass(){
 
   }
   request.send();
-
 }
 sortClass();

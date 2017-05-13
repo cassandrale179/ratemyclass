@@ -50,5 +50,4 @@
 	</div>
 </div>
 
-<script> var majorName = "CS"</script>
 <script src="../phpfile/sortpage.js" type="text/javascript"></script>

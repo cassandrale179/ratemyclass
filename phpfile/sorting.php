@@ -68,10 +68,10 @@
 			<button id="C2button"> CHOOSE A MAJOR </button>
 			<input type="text" id="searchbar" placeholder="Type A Major Here..." list="classes"/>
 				<datalist id="classes">
-					<option value="B">
-					<option value="Computer Science">
-					<option value="English">
-					<option value="Mathematics">
+					<option value="Biology (BIO)">
+					<option value="Computer Science (CS)">
+					<option value="English (ENGL)">
+					<option value="Mathematics (MATH)">
 				</datalist>
 		</div>
 		<div id="C2">
