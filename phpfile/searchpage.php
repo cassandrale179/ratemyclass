@@ -72,9 +72,9 @@ else {
 		<form method="post" action="searchpage.php">
 		<input type="text" name="q" id="searchbar" placeholder="Type Class Name Here..." list="classes"/>
 			<datalist id="classes">
-				<option value="CS 164">
-				<option value="CS 171">
-				<option value="CS 172">
+				<option value="CS164">
+				<option value="CS171">
+				<option value="CS172">
 			</datalist>
 
 	 </form>
@@ -82,18 +82,6 @@ else {
 	</div>
 
 
-<script>
-	$("#searchbar").on('input', function () {
-   var val = this.value;
-   var website = "../class/" + val + ".php";
-   website = website.replace(/\s+/g, '');
-   //filter object to return current value selected by user
-    if($('#classes option').filter(function(){
-        return this.value === val;
-    }).length) {
-       $(location).attr('href', website);
-    }
-});
-</script>
+<script src="classpage.js"></script>
 
 </body>

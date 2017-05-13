@@ -18,7 +18,7 @@
 		header("location: dashboard.php");
 	}
 	else{
-		echo "Failed to login";
+		echo "<script>alert('Failed to login. Either your username or password is wrong')</script>";
 	}
 
 ?>
