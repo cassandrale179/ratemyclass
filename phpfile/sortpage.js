@@ -38,6 +38,7 @@ pageRedirect();
 function sortClass(){
   //-----------Get some element ID-----------
   var jsondisplay = document.getElementById("E1");
+  var headerdisplay = document.getElementById("E");
 
   //-----------create some arrays-----------
   var classArray = [];
@@ -159,6 +160,7 @@ function sortClass(){
       if (permDifficulty == "Easy"){
         for (var n = 0; n < majorArray.length; n++){
           var text = "<a href='../class/" + majorArray[n] + ".php'><button style='border-left: 50px solid" + colorArray[n] + "'> <b>" + majorArray[n] + " </b>(Average: " + majorScore[n] + ")</button></a><br>";
+          headerdisplay.insertAdjacentHTML('beforeend', '<h1> Easy to Difficult </h1>');
           jsondisplay.insertAdjacentHTML('beforeend', text);
         }
       }
@@ -167,6 +169,7 @@ function sortClass(){
       if (permDifficulty == "Difficult"){
         for (var n = majorArray.length-1; n >= 0; n--){
           var text = "<a href='../class/" + majorArray[n] + ".php'><button style='border-left: 50px solid" + colorArray[n] + "'> <b>" + majorArray[n] + " </b>(Average: " + majorScore[n] + ")</button></a><br>";
+          headerdisplay.insertAdjacentHTML('beforeend', '<h1> Difficult to Easy </h1>');
           jsondisplay.insertAdjacentHTML('beforeend', text);
         }
       }
