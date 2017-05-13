@@ -55,7 +55,7 @@ function courseDisplay(){
 		var courseData = JSON.parse(courseRequest.responseText);
 		for (var i = 0; i < courseData.length; i++){
 			if(courseData[i].class == permClass){
-				var title = courseData[i].title;
+				var title = courseData[i].title.toUpperCase();
 				var credit = "<br><b> Credit: </b>" + courseData[i].credit;
 			 	var description = courseData[i].description;
 			}
