@@ -1,4 +1,20 @@
-<!DOCTYPE html>
+<?php
+  session_start();
+  include "adb.php";
+  if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    	$email = $_POST['email'];
+      $myArray = explode('@', $email);
+			if ($myArray[1] != "drexel.edu"){
+				echo "<script>alert('Please enter your Drexel email address')</script>";
+			}
+      else{
+        //... code to send password reset...
+      }
+
+?>
+
+
+
 <html lang = "en">
 <html>
 <head>
@@ -28,30 +44,15 @@
  	<link href="../css/registerstyle.css" rel="stylesheet" type="text/css">
 
 </head>
-<body>
-  <!-- Creating an account -->
-  <div id="account">
-  	<h1> LOGIN </h1>
-
-  	<!-- Creating input form -->
-  	<!-- 'name' tag is used later for SQL -->
-  	<form action="process.php" method="post">
-  		<div class="form-group">
-  			<label for="username"> Username: </label>
-  			<input type="text" class="form-control" name="username" id="username" placeholder="E.g: abc123">
-  		</div>
-
-  		<div class="form-group">
-  			<label for="password"> Password: </label>
-  			<input type="password" class="form-control" name="password" id="password"
-  			aria-describedby="passHelp" placeholder="New password">
-  		</div>
-
-  		<button id="login-mod" type="submit" name="login"> Login </button><br>
-      <div class="form-group">
-        <a href="forgot.php"><p>Forgot your password?</p></a>
-      </div>
-  	</form>
+</body>
+  <div id="forgotpassdiv">
+      <h1> FORGOT YOUR PASSWORD? </h1>
+        <h4> Input your Drexel email address below. We'll email instructions on how to reset your password. </h4>
+      <form action="forgot.php" method="post">
+     		<div class="form-group">
+          <label for="email"> Email: </label>
+    			<input type="email" class="form-control" name="email" placeholder="jd123@drexel.edu" required />
+          <button id="forgot-btn" type="submit" name="forgotpass"> Reset Password </button>
+        </div>
   </div>
 </body>
-</html>

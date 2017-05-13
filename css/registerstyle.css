@@ -39,12 +39,11 @@ h4{
 	margin-top: 20px;
 }
 
-.form-text{
-	color: #424949;
+.form-group p{
 	font-size: 15px;
 	font-style: italic;
+	margin-top: -10px;
 }
-
 
 #account{
 	height: 500px;
@@ -125,7 +124,6 @@ a:hover{
 	color: white;
 	border: 2px #424949 solid;
 	margin-left: 30%;
-	margin-top: 5px;
 	border-radius: 5px;
 }
 
@@ -137,4 +135,19 @@ a:hover{
 	margin-top: 10px;
 	font-style: italic;
 
+}
+
+/* The code downward from here are for file forgot.php */
+#forgotpassdiv{
+	margin-top: 150px;
+}
+
+#forgot-btn{
+	background: #424949;
+	font-size: 20px;
+	font-family:'PT-Serif', serif;
+	color: white;
+	border: 2px #424949 solid;
+	border-radius: 5px;
+	margin-top: 15px;
 }

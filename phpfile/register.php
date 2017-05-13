@@ -1,30 +1,45 @@
 <?php
 	session_start();
-	//Connecting to the mysql database accounts
 	include "adb.php";
+
 	if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	{
+		//-----IF PASSWORD MATCH-----
 		if ($_POST['password'] == $_POST['confirmpassword'])
 		{
 			$username = $_POST['username'];
 			$email = $_POST['email'];
 			$password = md5($_POST['password']);
-			$sql = "INSERT INTO users(username, email, password)". "VALUES ('$username', '$email', '$password')";
-			if ($conn->query($sql)===true)
-			{
-				header("location: initclass.php");
-				$_SESSION['username'] = $username;
-				$_SESSION['logged_in'] = 1;
 
+			//-----EMAIL PARSING-----
+			$myArray = explode('@', $email);
+			if ($myArray[1] != "drexel.edu"){
+				echo "<script>alert('Please enter your Drexel email address')</script>";
+			}
+
+			else
+			{
+				//Insert into database and redirect to dashboard
+				$sql = "INSERT INTO users(username, email, password)". "VALUES ('$username', '$email', '$password')";
+				if ($conn->query($sql)===true)
+				{
+					header("location: initclass.php");
+					$_SESSION['username'] = $username;
+					$_SESSION['logged_in'] = 1;
+				}
 			}
 		}
+
+		//-----IF PASSWORD DO NOT MATCH-----
 		else{
-			echo "Two password did not match!!!";
+			echo "<script>alert('Two passwords do not match'); </script>";
 		}
 	}
 ?>
 
-<!-- _________________________ HTML PART _________________________  -->
+
+
+<!-- __________________________________________ HTML PART _______________ ____________________  -->
 <!DOCTYPE html>
 <html lang = "en">
 <html>
@@ -69,7 +84,7 @@
 			    	<input class="form-control" type="text" placeholder="johndoe123" name="username" required />
 			    </div>
 			    <div class="space">
-			    	<label for="email"> Email: </label>
+			    	<label for="email"> Drexel Email: </label>
 				    <input class="form-control" type="email" placeholder="jd123@drexel.edu" name="email" required />
 				</div>
 				<div id="flex-display" class= "space">

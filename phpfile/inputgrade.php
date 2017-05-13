@@ -47,7 +47,7 @@
 			<a href='setting.php'><button id="Abtn"> SETTINGS </button></a>
 		</div>
 		<div id="A6">
-			<a href='index.html'><button id="Abtn" name="logout"> LOGOUT </button></a>
+			<a href='logout.php'><button id="Abtn" name="logout"> LOGOUT </button></a>
 		</div>
 	</div>
 

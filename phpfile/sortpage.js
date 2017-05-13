@@ -33,7 +33,7 @@ function pageRedirect()
           );
    });
 }
-pageRedirect();
+
 
 function sortClass(){
   //-----------Get some element ID-----------
@@ -83,7 +83,7 @@ function sortClass(){
        }
      });
 
-     //----------- sort class Array by name to prevent future relooping of data-----------b
+     //----------- sort class Array by name to prevent future relooping of data-----------
      classArray = classArray.sort();
 
 
@@ -92,7 +92,7 @@ function sortClass(){
      var count = 0;
      var k = 0;
      var j = 0;
-    while(j < data.length){
+     while(j < data.length){
        if (data[j].class == classArray[k]){
          sum += parseFloat(data[j].grade);
          count++;
@@ -177,4 +177,7 @@ function sortClass(){
   }
   request.send();
 }
+
+//------- Calling our function! ---------
+pageRedirect();
 sortClass();
