@@ -17,7 +17,7 @@
 <head>
 	<meta charset="utf-8">
  	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
-	<title>CS 171</title>
+  <title> Search</title>
 
 	<!-- Latest compiled and minified CSS -->
  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -57,7 +57,7 @@
 	</div>
 
 
-	<h1> CS 171 </h1> <!-- _______________ CHANGE VALUE HERE!!!!! -->
+	<h1 id="header"></h1>
 	<div id="B">
 		<div id="B1">
 			<div id="easy"><h3 id="jsondisplay"> </h3></div>
@@ -66,13 +66,8 @@
 	</div>
 
 	<div id="C">
-		<button id="C1B"> COMPUTER PROGRAMMING I </button>
+		<button id="C1B"> </button>
 		<div id="C1">
-			Introduces fundamental concepts of computing including memory, instructions, function calls, and activation records. Covers fundamentals of structured computer programming in the language of instruction: variables, input and output, expressions, assignment statements, conditionals and branching, subprograms, parameter passing, repetition, arrays, top-down design, testing, and debugging. <br>
-			<br>
-			<b> Credits: </b> 3.00
-			<br>
-			<b> Prerequesites: </b> None
 		</div>
 
 		<br>

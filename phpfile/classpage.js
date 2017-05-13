@@ -4,9 +4,8 @@ var classavg = 0;
 var count = 0;
 var arr = [];
 
-
 //------------- FUNCTION TO REDIRECT PAGE  ------------
-function searchbar()
+function searchBar()
 {
 	$("#searchbar").on('input', function () {
    val = this.value;
@@ -29,6 +28,8 @@ function pollBox(){
 		 });
 }
 
+
+//------------- FUNCTION TO HOVER  ------------
 function changeHover(hover, nonhover){
 	 $("#review, #saveclass").hover(function(){
 	 $(this).css("background-color", hover);
@@ -37,15 +38,51 @@ function changeHover(hover, nonhover){
 })};
 
 
+//------------- FUNCTION TO DISPLAY COURSE DESCRIPTION  ------------
+function courseDisplay(){
+
+	//create some variables here
+	var permClass = localStorage.getItem("val");
+	var titleDisplay = document.getElementById("C1B");
+	var descriptionDisplay = document.getElementById("C1");
+
+
+	//Pulling JSON data of course description
+	var courseRequest = new XMLHttpRequest();
+	courseRequest.open('GET', 'file2.php', true);
+	courseRequest.onload = function()
+	{
+		var courseData = JSON.parse(courseRequest.responseText);
+		for (var i = 0; i < courseData.length; i++){
+			if(courseData[i].class == permClass){
+				var title = courseData[i].title;
+				var credit = "<br><b> Credit: </b>" + courseData[i].credit;
+			 	var description = courseData[i].description;
+			}
+		}
+
+		//Display thing based on value of permanent value
+		header.insertAdjacentHTML('beforeend', permClass);
+		titleDisplay.insertAdjacentHTML('beforeend', title);
+		descriptionDisplay.insertAdjacentHTML('beforeend', description);
+		descriptionDisplay.insertAdjacentHTML('beforeend', credit);
+	}
+
+	courseRequest.send();
+
+
+}
+
+
  //--------------  FUNCTION TO DISPLAY CLASS CHART  -----------------------
  function calculateClassAvg(){
-
-	 //Create permanent variable to capture value from search bar
-	  var permClass = localStorage.getItem("val");
 
 	 //Get id of stuff
 	 var jsondisplay = document.getElementById("jsondisplay");
 	 var reviewbtn = document.getElementById("review");
+	 var header = document.getElementById("header");
+	 var permClass = localStorage.getItem("val");
+
 
 	 //Pulling JSON data from internal file
 	 var request = new XMLHttpRequest();
@@ -210,6 +247,7 @@ function displayPieChart(a,b,c,d,f,c1,c2,c3,c4,h1,h2,h3,h4)
 
 
 //----- CALLING OUR FUNCTION ----------
-searchbar();
+searchBar();
 pollBox();
+courseDisplay();
 calculateClassAvg();
