@@ -7,10 +7,7 @@
 			if ($myArray[1] != "drexel.edu"){
 				echo "<script>alert('Please enter your Drexel email address')</script>";
 			}
-      else{
-        //... code to send password reset...
-      }
-
+  }
 ?>
 
 
