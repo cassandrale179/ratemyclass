@@ -55,7 +55,7 @@
      $_SESSION['message'] = "Registration successful.";
      $_SESSION['logged_in'] = 1;
      $_SESSION['minimum_class'] = 1;
-     header("location: dashboard.php");
+     header("location: verify.php");
    }
 
 
@@ -97,8 +97,6 @@
 	<!-- Link the HTML to Font Awesome Icon (Bootstrap CDN) -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
-
 
 
 
