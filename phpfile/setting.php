@@ -1,3 +1,44 @@
+<?php
+
+	session_start();
+	include "adb.php";
+	if ( $_SESSION['logged_in'] != 1 ) {
+	  header('location: login.php');
+	}
+	else
+	{
+		$username= $_SESSION['username'];
+		if ($_SERVER['REQUEST_METHOD'] == 'POST')
+		{
+
+			//Capture the password
+			$password = md5($_POST['current']);
+			$newpass = md5($_POST['new']);
+			$newpass2 = md5($_POST['new2']);
+
+			//Query the database for table user
+			$result = mysqli_query($conn, "select * from users where username = '$username' and password='$password'") or die("Failure to query database" .mysqli_error($conn));
+			$row = mysqli_fetch_array($result);
+
+			//Check if the user log in is the owner of the account
+			if ($row['username'] == $username && $row['password'] == $password)
+			{
+				if ($newpass == $newpass2){
+					 $sql = "UPDATE users SET password='$newpass' WHERE username='$username'";
+					 if (mysqli_query($conn, $sql)){
+						 echo "<script>alert('Your password is updated!')</script>";
+					 }
+				}
+				else{
+					 echo "<script>alert('Password do not match')</script>";
+				}
+			}
+			else{
+				echo "<script>alert('Cannot update password. Please logout and try again')</script>";
+			}
+		}
+	}
+?>
 <head>
 	<meta charset="utf-8">
  	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
@@ -56,30 +97,27 @@
 <div id="B">
 	<div class='link'> EDIT PASSWORD </div>
 	<div id="B1">
-		<form action="#">
+		<form action="setting.php" method="post">
 			<br><br>
 			<p>
 				 Current: &nbsp&nbsp<input type="password" name="current">
 			<br><br>
 			New: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="password" name="new">
 			<br><br>
-			Re-type: &nbsp <input type="password" name="Re-type new">
+			Re-type: &nbsp <input type="password" name="new2">
 			<br><br> </p>
 
 			<div id="B1A">
-				<button>SAVE</button>
-			 	<button>CANCEL</button>
+				<button type="submit">SAVE</button>
 				<br>
-				<a href="#"><p><i>Forgot your password?</i></p></a>
 			</div>
-
 		</form>
 	</div>
 </div>
 
 
 <div id="C">
-	<button> SUBMITTED CLASS </button>
+	<a href="#"><button> SUBMITTED CLASS </button></a>
 	<div id="C1">
 		<h4> List of classes which you have submit the grade: </h4>
 		<h4>
