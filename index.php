@@ -137,7 +137,7 @@ if (isset($_SESSION['logged_in'])){
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>See a Sample Page</h2>
                     <p>You can see a sample page of a class here!</p>
-                    <a href="CS171.php" class="btn btn-default btn-lg">See Sample</a>
+                    <a href="terms/samplepage.html" class="btn btn-default btn-lg">See Sample</a>
                 </div>
             </div>
         </div>
@@ -200,7 +200,7 @@ if (isset($_SESSION['logged_in'])){
                         <a href="#" class="btn btn-default btn-lg"> <span class="network-name">FAQ</span></a>
                     </li>
                     <li>
-                        <a href="#" class="btn btn-default btn-lg"> <span class="network-name">Privacy Policy</span></a>
+                        <a href="terms/privacy.html" class="btn btn-default btn-lg"> <span class="network-name">Privacy Policy</span></a>
                     </li>
                 </ul>
 
@@ -212,7 +212,7 @@ if (isset($_SESSION['logged_in'])){
     <footer>
         <div class="container text-center">
             <p> Open source project on <a href="https://github.com/cassandrale179/ratemyclass/blob/master/README.md">GitHub</p></a>
-            Copyright &copy; RateMyClass 2017. All rights reserved. <a href="#"></a> <a href="#"></a>
+            Copyright &copy; RateMyClass 2017 | All rights reserved. <a href="#"></a> <a href="#"></a>
         </div>
     </footer>
 

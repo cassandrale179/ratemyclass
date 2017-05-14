@@ -18,6 +18,18 @@ h1{
 	text-transform: uppercase;
 }
 
+h3{
+	font-family: 'PT Serif', serif;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 20px;
+	text-align: center;
+	color:  #424949;
+	font-size: 20px;
+	line-height: 20px;
+	font-style: bold;
+}
+
 h4{
 	font-family: 'PT Serif', serif;
 	margin-left: 15%;
@@ -29,6 +41,25 @@ h4{
 	line-height: 20px;
 
 }
+
+p{
+	font-family: 'PT Serif', serif;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 20px;
+	color:  #424949;
+	font-size: 15px;
+	line-height: 20px;
+}
+
+li{
+	margin-left: 15%;
+	margin-right: 15%;
+	font-family: 'PT Serif', serif;
+	font-size: 15px;
+	line-height: 20px;
+}
+
 
 .form-group{
 	width: 40%;
@@ -152,4 +183,22 @@ a:hover{
 	border: 2px #424949 solid;
 	border-radius: 5px;
 	margin-top: 15px;
+}
+
+
+#space{
+	height: 100px;
+}
+
+
+footer{
+	background-color: black;
+	height: 100px;
+
+}
+
+footer p{
+	color: white;
+	text-align: center;
+	padding-top: 40px;
 }
