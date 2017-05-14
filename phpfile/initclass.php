@@ -102,7 +102,7 @@
 
 <div>
 		<h1> What Classes Have You Taken? </h1>
-    <h4> Enter at least three classes you have taken and your grade for that class. The information you provide is private and won't be shared without your consent (see Privacy Policy). </h4>
+    <h4> Enter at least three classes you have taken and your grade for that class. The information you provide is private and won't be shared without your consent (see <a target="blank" href="../terms/privacy.html">Privacy Policy</a>). </h4>
 
     <form class="form form-group" action="initclass.php" method="post" enctype="multipart/form-data" autocomplete="off">
     <div id="text-before-form">
