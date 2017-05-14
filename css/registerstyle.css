@@ -139,7 +139,9 @@ a:hover{
 
 /* The code downward from here are for file forgot.php */
 #forgotpassdiv{
-	margin-top: 150px;
+	margin-top: 10%;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 #forgot-btn{

@@ -5,7 +5,7 @@
 
 //Get value from form
 	$username = $_POST['username'];
-	$password = md5($_POST['password']);
+	$password = base64_encode($_POST['password']);
 
 //Query the database for table user
 	$result = mysqli_query($conn, "select * from users where username = '$username' and password='$password'") or die("Failure to query database" .mysqli_error($conn));

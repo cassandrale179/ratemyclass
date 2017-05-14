@@ -4,9 +4,30 @@
   if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     	$email = $_POST['email'];
       $myArray = explode('@', $email);
+
+      //----- IF IT'S NOT DREXEL EMAIL------
 			if ($myArray[1] != "drexel.edu"){
 				echo "<script>alert('Please enter your Drexel email address')</script>";
 			}
+
+      //----- ELSE SEND PASSWORD TO EMAIL------
+      else{
+
+        //retrieve username & password from database
+        $result = mysqli_query($conn, "select * from users where email = '$email'")
+        or die("Failure to query database" .mysqli_error($conn));
+        $row = mysqli_fetch_array($result);
+        $username = $row['username'];
+        $password = base64_decode($row['password']);
+
+
+        /*send email to user */
+        $to = $email;
+        $subject = "Your Password & Username | RateMyClass";
+        $message = "Your username is $username and your password is $password";
+        $headers = 'From:noreply@ratemyclass.org' . "\r\n";
+        mail($to, $subject, $message, $headers);
+      }
   }
 ?>
 
@@ -44,12 +65,12 @@
 </body>
   <div id="forgotpassdiv">
       <h1> FORGOT YOUR PASSWORD? </h1>
-        <h4> Input your Drexel email address below. We'll email instructions on how to reset your password. </h4>
+        <h4> Input your Drexel email address below. We'll email instructions on how to retrieve your password and username. </h4>
       <form action="forgot.php" method="post">
      		<div class="form-group">
           <label for="email"> Email: </label>
     			<input type="email" class="form-control" name="email" placeholder="jd123@drexel.edu" required />
-          <button id="forgot-btn" type="submit" name="forgotpass"> Reset Password </button>
+          <button id="forgot-btn" type="submit" name="forgotpass"> Submit </button>
         </div>
   </div>
 </body>

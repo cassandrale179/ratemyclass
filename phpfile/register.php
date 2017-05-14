@@ -9,7 +9,7 @@
 		{
 			$username = $_POST['username'];
 			$email = $_POST['email'];
-			$password = md5($_POST['password']);
+			$password = base64_encode($_POST['password']);
 
 			//-----IF IT'S NOT DREXEL EMAIL -----
 			$myArray = explode('@', $email);
@@ -20,14 +20,11 @@
 			//-----IF IT IS A DREXEL EMAIL ------
 			else
 			{
-
 				//------ SEND AN EMAIL VERIFICATION ------
-
-
 				$randnum = rand(1000,10000);
 				$to = $email;
 				$subject = "Confirm your email | RateMyClass";
-				$message = "Thank you for signing up! Your verification code is .$randnum ";
+				$message = "Thank you for signing up! Your verification code is $randnum ";
 				$headers = 'From:noreply@ratemyclass.org' . "\r\n";
 				mail($to, $subject, $message, $headers);
 
