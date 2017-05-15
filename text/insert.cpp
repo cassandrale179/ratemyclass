@@ -40,28 +40,25 @@ int main(){
     if (v[i] == "") whitePos.push_back(i);
   }
 
-  //whitePos = [4,9]
-  int vv = 0;
-  int ww = 0;
-  while(vv < v.size())
-  {
-    while(ww < whitePos[ww]){
-      information = "Information: " + v[vv]; vv++;
-      description = "Description: " + v[vv]; vv++;
-      college = v[vv]; vv++;
-      repeatStatus = v[vv]; vv++;
-      while(vv < whitePos[ww]){
-        other.push_back(v[vv]);
-        vv++;
+  unsigned int j = 0;
+  int k = 0;
+  while(j < whitePos.size()){
+    while(k < whitePos[j]){
+      information = "Information: " + v[k]; k++;
+      description = "Description: " + v[k]; k++;
+      college = v[k]; k++;
+      repeatStatus = v[k]; k++;
+      while(k < whitePos[j]){
+        other.push_back(v[k]);
+        k++;
       }
       os << information << endl;
       os << description << endl;
       os << college << endl;
       os << repeatStatus << endl;
-      vv++;
+      os << "---------------------------------------" << endl;
+      k++;
     }
-    ww++;
+    j++;
   }
-
-
 }
