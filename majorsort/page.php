@@ -49,4 +49,4 @@
 	</div>
 </div>
 
-<script src="../phpfile/sortpage.js" type="text/javascript"></script>
+<script src="../phpfile/sortpage2.js" type="text/javascript"></script>

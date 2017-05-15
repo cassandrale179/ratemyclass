@@ -92,5 +92,5 @@
 		</div>
 
 
-<script type="text/javascript" src="sortpage.js"></script>
+<script type="text/javascript" src="sortpage2.js"></script>
 </body>
