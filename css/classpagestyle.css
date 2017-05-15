@@ -3,12 +3,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300');
 
 body{
-    background-image: url(http://media.idownloadblog.com/wp-content/uploads/2016/08/iPad_Tablet_pure_minimal.png);
     background-size: cover;
-    background-position: top center;
+    background-image: url(../images/gray.png);
     z-index: -3;
     height: 650px;
-    background-repeat: no-repeat;
 
 }
 
@@ -260,25 +258,18 @@ p{
   padding: 2%;
   width: 100px;
   height: 50px;
-  margin-left: -2%;
-  margin-right: 10px;
-
-}
-
-
-#commentSubmit{
-  font-family: 'Roboto Condensed', sans-serif;
-  border: none;
-  box-shadow: none;
-  margin-top: 10px;
   margin-left: -1%;
-  padding: 10px;
-  width: 503px;
+
 }
 
-#commentSubmit:hover{
-  background: #424949;
-  color: white;
+#C4input{
+    width: 504px;
+    border: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    height: 100px;
+    margin-left: -1%;
+    background-color: rgba(0,0,0, 0.5);
+    color: white;
 }
 
 #D{

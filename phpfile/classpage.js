@@ -145,7 +145,6 @@ function courseDisplay(){
 			h3 = "#76D7C4";
 			h4 = "#A3E4D7";
 			reviewbtn.style.background = "#48C9B0";
-			review.insertAdjacentHTML('beforeend', 'WAS THIS CLASS EASY? CLICK TO VOTE');
 			changeHover(c1,c2);
 
 		}
@@ -161,7 +160,6 @@ function courseDisplay(){
 			h3 = "##F1C40F";
 			h4 = "##F9E79F";
 			reviewbtn.style.background = "#D4AC0D";
-			review.insertAdjacentHTML('beforeend', 'WAS THIS CLASS MEDIUM? CLICK TO VOTE');
 			changeHover(c1,c2);
 		}
 		else if (classavg > 0){
@@ -176,7 +174,6 @@ function courseDisplay(){
 			h3 = "#C0392B";
 			h4 = "#F1948A";
 			reviewbtn.style.background = "#C0392B";
-			review.insertAdjacentHTML('beforeend', 'WAS THIS CLASS HARD? CLICK TO VOTE');
 			changeHover(c1,c2);
 		}
 		displayPieChart(a,b,c,d,f,c1,c2,c3,c4,h1,h2,h3,h4);

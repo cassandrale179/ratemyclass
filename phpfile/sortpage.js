@@ -168,12 +168,11 @@ function sortClass(){
         //--------------------Displaying Hard Class First --------------------
       if (permDifficulty == "Difficult"){
         for (var n = majorArray.length-1; n >= 0; n--){
-          var text = "<a href='../class/" + majorArray[n] + ".php'><button style='border-left: 50px solid" + colorArray[n] + "'> <b>" + majorArray[n] + " </b>(Average: " + majorScore[n] + ")</button></a><br>";
+          var text = "<button style='border-left: 50px solid" + colorArray[n] + "'> <b>" + majorArray[n] + " </b>(Average: " + majorScore[n] + ")</button></a><br>";
           headerdisplay.insertAdjacentHTML('beforeend', '<h1> Difficult to Easy </h1>');
           jsondisplay.insertAdjacentHTML('beforeend', text);
         }
       }
-
   }
   request.send();
 }

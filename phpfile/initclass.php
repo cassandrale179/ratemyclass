@@ -49,8 +49,14 @@
    $sql2 = "INSERT INTO score2(class, grade, year)". "VALUES ('$class2', '$letter2', '$year2')";
    $sql3 = "INSERT INTO score2(class, grade, year)". "VALUES ('$class3', '$letter3', '$year3')";
 
+   $update1 = "UPDATE course SET sum = sum + '$letter1', count = count + 1 WHERE class = '$class1'";
+   $update2 = "UPDATE course SET sum = sum + '$letter2', count = count + 1 WHERE class = '$class2'";
+   $update3 = "UPDATE course SET sum = sum + '$letter3', count = count + 1  WHERE class = '$class3'";
+
    //if query is successful
-   if ($conn->query($sql1)===true and $conn->query($sql2)===true and $conn->query($sql3)===true)
+   if ($conn->query($sql1)===true and $conn->query($sql2)===true and $conn->query($sql3)===true
+    and $conn->query($update1) === true and $conn->query($update2) === true and $conn->query($update3)
+    === true)
    {
      $_SESSION['message'] = "Registration successful.";
      $_SESSION['logged_in'] = 1;
@@ -60,8 +66,6 @@
 
 
  }
-
-
 
  ?>
 

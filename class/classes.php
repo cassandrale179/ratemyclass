@@ -98,18 +98,21 @@
 			</form>
 		</div>
 
-		<div id="C3">
-			<button id="review"></button>
-		</div>
 
-    <!-- ______________________ FORM TO SUBMIT REVIEW _________________ -->
-		<div id="C4">
-			<div id="target" style="display: none">
-          <button> Yes </button>
-          <button> No </button>
-		  </div>
+  		<div id="C3">
+  			<button id="review">ADD REVIEW + </button>
+  		</div>
+		  <div id="C4">
+        <form>
+			    <div id="target" style="display: none">
+            <textarea id='C4input' placeholder='Was the class rating as expected? Would you recommend this class to other students? Leave an anonymous review here :)' name='message' required>
+            </textarea>
+            <button> Submit </button>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
+
   </div>
 
 
