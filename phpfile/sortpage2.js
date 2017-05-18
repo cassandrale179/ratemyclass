@@ -104,23 +104,13 @@ function sortClass(){
     }
 
     //--------------------Displaying Hard Class First --------------------
-  if (permDifficulty == "Difficult"){
-    for (var n = newAvg.length-1; n >= 0; n--){
-      var text = "<button style='border-left: 50px solid" + colorArray[n] + "'> <b>" + newClass[n] + " </b>(Average: " + newAvg[n] + ")</button></a><br>";
-      headerdisplay.insertAdjacentHTML('beforeend', '<h1> Difficult to Easy </h1>');
-      jsondisplay.insertAdjacentHTML('beforeend', text);
+    if (permDifficulty == "Difficult"){
+      for (var n = newAvg.length-1; n >= 0; n--){
+        var text = "<button style='border-left: 50px solid" + colorArray[n] + "'> <b>" + newClass[n] + " </b>(Average: " + newAvg[n] + ")</button></a><br>";
+        headerdisplay.insertAdjacentHTML('beforeend', '<h1> Difficult to Easy </h1>');
+        jsondisplay.insertAdjacentHTML('beforeend', text);
+      }
     }
-  }
-
-
-
-
-
-
-
-
-
-
   }
   request.send();
 }
