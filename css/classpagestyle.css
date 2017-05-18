@@ -176,9 +176,9 @@ p{
 }
 
 #C2input{
-    width: 80%;
+    width: 50%;
     height: 50px;
-    border: none;
+    border: white 2px solid;
     padding-left: 10px;
     font-family: 'Roboto Condensed', sans-serif;
     background: rgba(0,0,0,0.8);

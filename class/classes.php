@@ -1,12 +1,10 @@
 <?php
     session_start();
-    $class = "CS171"; //-------------------CHANGE VALUE HERE!!!!!
     include '../phpfile/classmessage.php';
     if ( $_SESSION['logged_in'] != 1 ) {
   	  header('location: ../phpfile/login.php');
   	}
   	else {
-  	    // Makes it easier to read
   	    $username= $_SESSION['username'];
     }
 ?>
@@ -74,11 +72,11 @@
 
 		<button id="C1B"> HAVE YOU TAKEN THIS CLASS BEFORE? </button>
 		<div id="C2">
-			<form method='post' action='classmessage.php'>
+			<form method='post' action='../phpfile/classmessage.php'>
 				<div id='wrapper'>
 					<input name='letter' type='text' id='C2input' list='classes'
-            placeholder='Enter your grade here :) Your data helps us grow!' required />
-          <input name='class' type='hidden' value='CS171' /> <!-- _______________ CHANGE VALUE HERE!!!!! -->
+            placeholder='Grade' required />
+          <input name='year' type='text' placeholder="Year" id='C2input' />
 					<datalist id='classes'>
 						<option value='A+'>
 						<option value='A'>
