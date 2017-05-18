@@ -1,11 +1,50 @@
 <?php
     session_start();
-    include '../phpfile/classmessage.php';
+    include "../phpfile/adb.php";
     if ( $_SESSION['logged_in'] != 1 ) {
   	  header('location: ../phpfile/login.php');
   	}
-  	else {
-  	    $username= $_SESSION['username'];
+  	else
+    {
+      $username= $_SESSION['username'];
+      date_default_timezone_set('America/New_York');
+
+      //QUERY THE DATABASE FOR USER CLASS
+      $result = mysqli_query($conn, "select * from users where username = '$username'") or die("Failure to query database" .mysqli_error($conn));
+      $row = mysqli_fetch_array($result);
+      $str = $row['userclass'];
+
+      //ADDING GRADES TO CLASS DATA
+      if (isset($_POST['gradeSubmit']))
+      {
+        //CAPTURE STUFF FROM FORM
+        $letter = $_POST['letter'];
+        $class = $_POST['class'];
+        $year = $_POST['year'];
+        $str .= $class;
+
+
+        //GRADE CONVERSION FUNCTION
+        if ($letter == "A" || $letter == "A+") $letter = 4;
+        if ($letter == "A-") $letter = 3.67;
+        if ($letter == "B+") $letter = 3.33;
+        if ($letter == "B")  $letter = 3;
+        if ($letter == "B-") $letter = 2.67;
+        if ($letter == "C+") $letter = 2.33;
+        if ($letter == "C")  $letter = 2;
+        if ($letter == "C-") $letter = 1.67;
+        if ($letter == "D+") $letter = 1.33;
+        if ($letter == "D")  $letter = 1;
+        if ($letter == "F")  $letter = 0;
+
+
+        //INSERT GRADE AND PREVENT RESUBMISSION
+        $sql = "INSERT INTO score2(class, grade, year) VALUES ('$class', '$letter', '$year')";
+        $check = "UPDATE users SET userclass = '$str' WHERE username = '$username'";
+        if ($conn->query($sql)===true and $conn->query($check)===true){
+            header('location: ../class/classes.php');
+        }
+      }
     }
 ?>
 
@@ -64,15 +103,18 @@
 	</div>
 
 	<div id="C">
+
+      <!-- _________________ COURSE DESCRIPTION GOES HERE __________________  -->
 		<button id="C1B"> </button>
 		<div id="C1">
 		</div>
 
 		<br>
 
+    <!-- _________________ USER CAN INPUT GRADE HERE __________________  -->
 		<button id="C1B"> HAVE YOU TAKEN THIS CLASS BEFORE? </button>
 		<div id="C2">
-			<form method='post' action='../phpfile/classmessage.php'>
+			<form method='post' action='classes.php'>
 				<div id='wrapper'>
 					<input name='letter' type='text' id='C2input' list='classes'
             placeholder='Grade' required />
@@ -96,7 +138,7 @@
 			</form>
 		</div>
 
-
+      <!-- _________________ USER CAN ADD COMMENTS HERE  __________________  -->
   		<div id="C3">
   			<button id="review">ADD REVIEW + </button>
   		</div>
@@ -112,6 +154,4 @@
     </div>
 
   </div>
-
-
 <script type="text/javascript" src="../phpfile/classpage.js"></script>
