@@ -36,6 +36,7 @@ function pageRedirect()
 
 //---------- FUNCTION TO SORT CLASS ----------
 function sortClass(){
+
   //-----------GET SOME ID AND LOCAL STORAGE VALUE-----------
   var jsondisplay = document.getElementById("E1");
   var headerdisplay = document.getElementById("E");
@@ -89,12 +90,12 @@ function sortClass(){
       else if (newAvg[m] > 0) colorArray.push("#922B21");
     }
 
-    //-------------------- If no local storage value is set --------------------
+    //-------------------- IF NO LOCAL STORAGE VALUE --------------------
     if (permDifficulty == "undefined" || permMajorSort == "undefined"){
       alert ("Please click on sorting to sort your class");
     }
 
-    //--------------------Displaying Easy Class First --------------------
+    //-------------------- DISPLAYING EASY CLASS --------------------
     if (permDifficulty == "Easy"){
       for (var n = 0; n < newAvg.length; n++){
         var text = "<button style='border-left: 50px solid" + colorArray[n] + "'> <b>" + newClass[n] + " </b>(Average: " + newAvg[n] + ")</button></a><br>";
@@ -103,7 +104,7 @@ function sortClass(){
       }
     }
 
-    //--------------------Displaying Hard Class First --------------------
+    //-------------------- DISPLAYING HARD CLASS  --------------------
     if (permDifficulty == "Difficult"){
       for (var n = newAvg.length-1; n >= 0; n--){
         var text = "<button style='border-left: 50px solid" + colorArray[n] + "'> <b>" + newClass[n] + " </b>(Average: " + newAvg[n] + ")</button></a><br>";

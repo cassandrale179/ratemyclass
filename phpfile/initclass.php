@@ -1,7 +1,8 @@
 <?php
   session_start();
+   include "adb.php";
 
-  //Check to see if user is logged in
+  //CHECK TO SEE IF USER IS LOGGED IN
   if ($_SESSION['logged_in'] != 1 ){
     header('location: login.php');
   }
@@ -9,13 +10,11 @@
     	$username = $_SESSION['username'];
   }
 
-
- //Form submission
- include "adb.php";
+ //FORM SUBMISSION
  if ($_SERVER['REQUEST_METHOD'] == 'POST')
  {
 
-   //capture things from form
+   //CAPTURE THINGS FROM FORM
    $class1 = $_POST['class1'];
    $letter1 = $_POST['letter1'];
    $year1 = $_POST['year1'];
@@ -26,7 +25,7 @@
    $letter3 = $_POST['letter3'];
    $year3 = $_POST['year3'];
 
-   //Char letter grade conversion function
+   //LETTER GRADE CONVERSION FUNCTION
    if ($letter1 == "A")$letter1 = 4;
    if ($letter1 == "B")$letter1 = 3;
    if ($letter1 == "C")$letter1 = 2;
@@ -44,19 +43,24 @@
    if ($letter3 == "F")$letter3 = 0;
 
 
-   //Store variables into database
+   //STORE VARIABLES INTO DATABASE
    $sql1 = "INSERT INTO score2(class, grade, year)". "VALUES ('$class1', '$letter1', '$year1')";
    $sql2 = "INSERT INTO score2(class, grade, year)". "VALUES ('$class2', '$letter2', '$year2')";
    $sql3 = "INSERT INTO score2(class, grade, year)". "VALUES ('$class3', '$letter3', '$year3')";
 
+   //UPDATE SUM AND COUNT IN DATABASE
    $update1 = "UPDATE course SET sum = sum + '$letter1', count = count + 1 WHERE class = '$class1'";
    $update2 = "UPDATE course SET sum = sum + '$letter2', count = count + 1 WHERE class = '$class2'";
    $update3 = "UPDATE course SET sum = sum + '$letter3', count = count + 1  WHERE class = '$class3'";
 
-   //if query is successful
+  //CHECK TO MAKE SURE USER CAN ONLY ENTER A CLASS IN ONCE
+  $three = $class1. "," .$class2. ",". $class3.",";
+  $check = "UPDATE users SET userclass = '$three' WHERE username = '$username'";
+
+   //IF QUERY IS SUCCESSFUL
    if ($conn->query($sql1)===true and $conn->query($sql2)===true and $conn->query($sql3)===true
     and $conn->query($update1) === true and $conn->query($update2) === true and $conn->query($update3)
-    === true)
+    === true and $conn->query($check)=== true)
    {
      $_SESSION['message'] = "Registration successful.";
      $_SESSION['logged_in'] = 1;

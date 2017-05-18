@@ -94,36 +94,17 @@
 		</div>
 	</div>
 
+<!-- _______________________________ CHANGING PASSWORD __________________________________________ -->
 <div id="B">
-	<div class='link'> EDIT PASSWORD </div>
+	<a href="#"><button> CHANGE PASSWORD </button></a>
 	<div id="B1">
 		<form action="setting.php" method="post">
-			<br><br>
-			<p>
-				 Current: &nbsp&nbsp<input type="password" name="current">
-			<br><br>
-			New: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="password" name="new">
-			<br><br>
-			Re-type: &nbsp <input type="password" name="new2">
-			<br><br> </p>
-
-			<div id="B1A">
-				<button type="submit">SAVE</button>
-				<br>
-			</div>
+			<h4>Current: &nbsp&nbsp<input type="password" name="current"></h4>
+			<h4>New: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="password" name="new"></h4>
+			<h4>Re-type: &nbsp <input type="password" name="new2"></h4><br />
+		<div id="B2">
+			<button type="submit">SAVE</button>
+		</div>
 		</form>
 	</div>
-</div>
-
-
-<div id="C">
-	<a href="#"><button> SUBMITTED CLASS </button></a>
-	<div id="C1">
-		<h4> List of classes which you have submit the grade: </h4>
-		<h4>
-			<li>CS 171 </li>
-			<li>CS 164 </li>
-			<li>CS 172 </li>
-		</h4>
-	</div
 </div>

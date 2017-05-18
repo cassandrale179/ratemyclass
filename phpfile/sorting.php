@@ -148,7 +148,6 @@
 					<option value = "Real Estate (REAL)">
 					<option value = "Systems Engineering (SYSE)">
 					<option value = "Public Health (PBHL)">
-					<option value = "Center for Hospitality and Sport Management (SH)">
 					<option value = "Culinary Arts (CULA)">
 					<option value = "Food Science (FDSC)">
 					<option value = "Hotel & Restaurant Management (HRM)">
@@ -226,12 +225,10 @@
 					<option value = "Nutrition & Food Science (NFS)">
 					<option value = "Physiology (PHGY)">
 					<option value = "Statistics (STS)">
-					<option value = "Pennoni Honors College (PE)">
 					<option value = "Custom-Designed Minor (CSDN)">
 					<option value = "Honors Program (HNRS)">
 					<option value = "Leadership (LEAD)">
 					<option value = "Biomedical Engineering & Sci (BMES)">
-					<option value = "School of Education (T)">
 					<option value = "Creativity Studies (CRTV)">
 					<option value = "Education Human Resource Devel (EHRD)">
 					<option value = "Education Learning Techniques (EDLT)">
@@ -260,5 +257,5 @@
 		</div>
 
 
-<script type="text/javascript" src="sortpage2.js"></script>
+<script type="text/javascript" src="sortpage.js"></script>
 </body>
