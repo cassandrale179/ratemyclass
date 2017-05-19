@@ -211,7 +211,7 @@ if (isset($_SESSION['logged_in'])){
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p> Project on <a href="https://github.com/cassandrale179/ratemyclass">GitHub</p></a>
+            <p> See project on <a href="https://github.com/cassandrale179/ratemyclass">GitHub</p></a>
             Copyright &copy; RateMyClass 2017 | All rights reserved. <a href="#"></a> <a href="#"></a>
         </div>
     </footer>

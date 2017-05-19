@@ -45,6 +45,8 @@ function courseDisplay(){
 	var permClass = localStorage.getItem("val");
 	var titleDisplay = document.getElementById("C1B");
 	var descriptionDisplay = document.getElementById("C1");
+	var wrapper = document.getElementById("wrapper");
+	var target = document.getElementById("classplace");
 
 
 	//Pulling JSON data of course description
@@ -70,6 +72,8 @@ function courseDisplay(){
 		//Store local session values
 		var input = "<input name='class' type='hidden' value='" + permClass + "' />";
 		wrapper.insertAdjacentHTML('beforeend', input);
+		target.insertAdjacentHTML('beforeend', input);
+
 	}
 
 	courseRequest.send();
@@ -83,7 +87,6 @@ function courseDisplay(){
 	 var jsondisplay = document.getElementById("jsondisplay");
 	 var reviewbtn = document.getElementById("review");
 	 var header = document.getElementById("header");
-	 var wrapper = document.getElementById("wrapper");
 	 var permClass = localStorage.getItem("val");
 
 

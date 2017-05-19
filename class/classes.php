@@ -1,13 +1,13 @@
 <?php
     session_start();
     include "../phpfile/adb.php";
+    include "../phpfile/comment.php";
     if ( $_SESSION['logged_in'] != 1 ) {
   	  header('location: ../phpfile/login.php');
   	}
   	else
     {
       $username= $_SESSION['username'];
-      date_default_timezone_set('America/New_York');
 
       //QUERY THE DATABASE FOR USER CLASS
       $result = mysqli_query($conn, "select * from users where username = '$username'") or die("Failure to query database" .mysqli_error($conn));
@@ -153,13 +153,15 @@
   			<button id="review">ADD REVIEW + </button>
   		</div>
 		  <div id="C4">
-        <form>
-			    <div id="target" style="display: none">
-            <textarea id='C4input' placeholder='Was the class rating as expected? Would you recommend this class to other students? Leave an anonymous review here :)' name='message' required>
-            </textarea>
-            <button> Submit </button>
-          </div>
-        </form>
+          <form method='POST' action='../phpfile/comment.php'>
+            <div id='classplace'></div>
+            <div id='target' style='display:none'>
+              <input type='hidden' name='date' value="<?php echo date('Y-m-d H:i:s');?>"/>
+              <textarea id='C4input' name='message' required></textarea>
+              <button type='submit' name='commentSubmit'> Submit </button>
+              <h5> Your review will be posted anonymously. </h5>
+            </div>
+          </form>
       </div>
     </div>
 
