@@ -3,7 +3,7 @@ var val;
 var classavg = 0;
 var count = 0;
 var arr = [];
-var globalvariable;
+var permClass;
 
 //------------- FUNCTION TO REDIRECT PAGE  ------------
 function searchBar()
@@ -43,12 +43,11 @@ function changeHover(hover, nonhover){
 function courseDisplay(){
 
 	//create some variables here
-	var permClass = localStorage.getItem("val");
+	permClass = localStorage.getItem("val");
 	var titleDisplay = document.getElementById("C1B");
 	var descriptionDisplay = document.getElementById("C1");
 	var wrapper = document.getElementById("wrapper");
-	var target = document.getElementById("classplace");
-	var review = document.getElementById("D");
+	var classplace = document.getElementById("classplace");
 
 
 	//Pulling JSON data of course description
@@ -73,11 +72,8 @@ function courseDisplay(){
 
 		//Store local session values
 		var input = "<input name='class' type='hidden' value='" + permClass + "' />";
-		var phpcode =  "<?php echo 'something here'; ?>";
 		wrapper.insertAdjacentHTML('beforeend', input);
-		target.insertAdjacentHTML('beforeend', input);
-		review.insertAdjacentHTML('beforeend', phpcode);
-
+		classplace.insertAdjacentHTML('beforeend', input);
 	}
 
 	courseRequest.send();
@@ -92,8 +88,6 @@ function courseDisplay(){
 	 var reviewbtn = document.getElementById("review");
 	 var header = document.getElementById("header");
 	 var permClass = localStorage.getItem("val");
-	 globalvariable = permClass;
-
 
 	 //Pulling JSON data from internal file
 	 var request = new XMLHttpRequest();
@@ -203,9 +197,6 @@ function courseDisplay(){
 
 
  //--------------------------- DISPLAYING PIE CHART -----------------------------
-
-
-//Piechart thingy
 function displayPieChart(a,b,c,d,f,c1,c2,c3,c4,h1,h2,h3,h4)
 {
  Chart.defaults.global.defaultFontFamily = "Roboto Condensed";
@@ -253,9 +244,27 @@ function displayPieChart(a,b,c,d,f,c1,c2,c3,c4,h1,h2,h3,h4)
  });
 }
 
+function comment(){
+	var D = document.getElementById("D");
+	var request = new XMLHttpRequest();
+	request.open('GET', 'file3.php', true);
+	request.onload = function(){
+		var review = JSON.parse(request.responseText);
+		for (var i = 0; i < review.length; i++){
+			if (review[i].class == permClass){
+				var text = "<div id='D1'> <b>Date:</b> " + review[i].date + "<br>" + "<b>Review: </b>" + review[i].message + "<br></div>";
+				D.insertAdjacentHTML('beforeend', text);
+			}
+		}
+	}
+	request.send();
+}
+
+
 
 //----- CALLING OUR FUNCTION ----------
 searchBar();
 pollBox();
 courseDisplay();
 calculateClassAvg();
+comment();

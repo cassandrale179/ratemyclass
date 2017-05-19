@@ -157,7 +157,7 @@
           <form method='POST' action='classes.php'>
             <div id='classplace'></div>
             <div id='target' style='display:none'>
-              <input type='hidden' name='date' value="<?php echo date('Y-m-d H:i:s');?>"/>
+              <input type='hidden' name='date' value="<?php echo date('Y-m-d');?>"/>
               <textarea id='C4input' name='message' required></textarea>
               <button type='submit' name='commentSubmit'> Submit </button>
               <h5> Your review will be posted anonymously. </h5>
@@ -165,21 +165,8 @@
           </form>
       </div>
 </div>
-
 <div id="D">
-<h3> Reviews </h3>
-<?php
-  //$class = "<script>document.write(globalvariable)</script>";
-  $class='CS171';
-  $comment = "SELECT * FROM comments WHERE class='$class'";
-  $result = $conn->query($comment);
-  while($row = $result->fetch_assoc()){
-    echo "<div id='D1'>";
-    echo $row['date']."<br>";
-    echo $row['message']."<br>";
-    echo "</div>";
-  }
- ?>
+  <h3> Reviews </h3>
+  <h5> Reviews for a class will be posted down here.</h5>
 </div>
 <script type="text/javascript" src="../phpfile/classpage.js"></script>
-<!-- _________________ DISPLAYING COMMENTS DOWN HERE  __________________ -->
