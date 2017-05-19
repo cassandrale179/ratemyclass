@@ -104,8 +104,7 @@
 		<a href="../phpfile/logout.php"><div id="A6"></div></a>
 	</div>
 
-
-	<h1 id="header"></h1>
+  <h1 id="header"></h1>
 	<div id="B">
 		<div id="B1">
 			<div id="easy"><h3 id="jsondisplay"> </h3></div>
@@ -158,7 +157,7 @@
             <div id='classplace'></div>
             <div id='target' style='display:none'>
               <input type='hidden' name='date' value="<?php echo date('Y-m-d');?>"/>
-              <textarea id='C4input' name='message' required></textarea>
+              <textarea id='C4input' name='message' required></textarea><br />
               <button type='submit' name='commentSubmit'> Submit </button>
               <h5> Your review will be posted anonymously. </h5>
             </div>
