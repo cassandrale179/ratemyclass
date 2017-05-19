@@ -3,9 +3,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300');
 
 
+p{
+    color: white;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 10px;
+}
 
 body{
-    background-image: url(http://media.idownloadblog.com/wp-content/uploads/2016/08/iPad_Tablet_pure_minimal.png);
+    background-image: url(../images/gray.png);
     background-size: cover;
     z-index: -3;
     height: 1200px;
@@ -149,13 +155,6 @@ button{
     font-size: 20px;
 }
 
-p{
-    color: white;
-    text-align: center;
-    font-family: 'Roboto Condensed', sans-serif;
-    padding-top: 10px;
-}
-
 #B2{
     margin-top: 150px;
     width: 700px;
@@ -166,4 +165,12 @@ p{
 
 #canvas-wrap{
     padding-top: 15px;
+}
+
+#C{
+  position: absolute;
+  margin-top: 600px;
+  margin-left: 10%;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 15px;
 }

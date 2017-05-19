@@ -7,7 +7,10 @@
 	}
 	else
 	{
+
+		//CAPTURE USERNAME AND THE CLASSES THEY HAVE INPUT GRADE
 		$username= $_SESSION['username'];
+
 		if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		{
 
@@ -94,9 +97,9 @@
 		</div>
 	</div>
 
-<!-- _______________________________ CHANGING PASSWORD __________________________________________ -->
+<!-- ___________________________ CHANGING PASSWORD_______________________________________ -->
 <div id="B">
-	<a href="#"><button> CHANGE PASSWORD </button></a>
+	<button> CHANGE PASSWORD </button>
 	<div id="B1">
 		<form action="setting.php" method="post">
 			<h4>Current: &nbsp&nbsp<input type="password" name="current"></h4>

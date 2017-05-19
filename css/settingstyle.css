@@ -9,8 +9,10 @@ body{
   height: 1000px;
 }
 
+h1{
+  text-align: center;
+}
 
-/* ------ Text styling ------ */
 h4{
   color: white;
   text-align: center;
@@ -27,7 +29,6 @@ p{
     font-size: 15px;
 }
 
-/* ------ Remove outline ------ */
 input{
     outline: none;
 }
@@ -35,8 +36,6 @@ input{
 button{
     outline: none;
 }
-
-
 
 #header{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -179,7 +178,7 @@ button{
 
 #B button{
   font-family: 'Roboto Condensed', sans-serif;
-  background: rgba(0,0,0,0.77);
+  background: rgba(0,0,0,0.7);
   border: none;
   box-shadow: none;
   color: white;
@@ -190,7 +189,7 @@ button{
   text-align: center;
 }
 
-
+/*SAVE BUTTON */
 #B2 button{
     background: rgba(0,0,0,0.6);
     padding: 5px;

@@ -1,12 +1,16 @@
 <?php
 	session_start();
+	include "adb.php";
 	if ( $_SESSION['logged_in'] != 1 ) {
 	  header('location: login.php');
 	}
 	else {
 	    $username= $_SESSION['username'];
+			$result = mysqli_query($conn, "select * from users where username = '$username'") or die("Failure to query database" .mysqli_error($conn));
+			$row = mysqli_fetch_array($result);
+			$str = $row['userclass'];
+			$classes = explode(",", $str);
 		};
-
 	?>
 
 	<head>
@@ -66,6 +70,18 @@
 	<div id='B2'>
 		<canvas id='canvas' width='900' height='400'></canvas>
 	</div>
+
+	<!-- ___________________________ LIST OF CLASSES_______________________________________ -->
+	<div id="C">
+		<h1> CLASSES YOU SUBMITTED </h1>
+		A list of classes you have already entered will appear here:
+		<?php
+			for ($i = 0; $i < sizeof($classes)-1; $i++){
+				echo "<li>$classes[$i]</li>";
+			}
+		 ?>
+	</div>
+
 
 	<!-- Script for the Bar Chart -->
 	<script>
