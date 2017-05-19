@@ -21,8 +21,6 @@
         $letter = $_POST['letter'];
         $class = $_POST['class'];
         $year = $_POST['year'];
-        $str .= $class;
-
 
         //GRADE CONVERSION FUNCTION
         if ($letter == "A" || $letter == "A+") $letter = 4;
@@ -37,12 +35,24 @@
         if ($letter == "D")  $letter = 1;
         if ($letter == "F")  $letter = 0;
 
+        //CHECK IF USER ALREADY ENTER GRADE FOR THAT CLASS
+        $enter = 0;
+        $classes = explode(",", $str);
+        for ($i = 0; $i < sizeof($classes); $i++){
+          if ($classes[$i] == $class){
+            echo "<script>alert('You already enter grade for this class')</script>";
+            $enter = 1;
+          }
+        }
 
-        //INSERT GRADE AND PREVENT RESUBMISSION
-        $sql = "INSERT INTO score2(class, grade, year) VALUES ('$class', '$letter', '$year')";
-        $check = "UPDATE users SET userclass = '$str' WHERE username = '$username'";
-        if ($conn->query($sql)===true and $conn->query($check)===true){
-            header('location: ../class/classes.php');
+        //IF THEY HAVEN'T ENTER THE GRADE FOR THAT CLASS YET
+        if ($enter == 0){
+          $str .= $class .",";
+          $sql = "INSERT INTO score2(class, grade, year) VALUES ('$class', '$letter', '$year')";
+          $check = "UPDATE users SET userclass = '$str' WHERE username = '$username'";
+          if ($conn->query($sql)===true and $conn->query($check)===true){
+              header('location: ../class/classes.php');
+          }
         }
       }
     }
