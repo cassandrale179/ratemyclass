@@ -8,6 +8,7 @@
   	else
     {
       $username= $_SESSION['username'];
+      date_default_timezone_set('America/New_York');
 
       //QUERY THE DATABASE FOR USER CLASS
       $result = mysqli_query($conn, "select * from users where username = '$username'") or die("Failure to query database" .mysqli_error($conn));
@@ -112,7 +113,7 @@
 		</div>
 	</div>
 
-	<div id="C">
+<div id="C">
 
       <!-- _________________ COURSE DESCRIPTION GOES HERE __________________  -->
 		<button id="C1B"> </button>
@@ -124,7 +125,7 @@
     <!-- _________________ USER CAN INPUT GRADE HERE __________________  -->
 		<button id="C1B"> HAVE YOU TAKEN THIS CLASS BEFORE? </button>
 		<div id="C2">
-			<form method='post' action='classes.php'>
+			<form method='post' action='../phpfile/comment.php'>
 				<div id='wrapper'>
 					<input name='letter' type='text' id='C2input' list='classes'
             placeholder='Grade' required />
@@ -153,7 +154,7 @@
   			<button id="review">ADD REVIEW + </button>
   		</div>
 		  <div id="C4">
-          <form method='POST' action='../phpfile/comment.php'>
+          <form method='POST' action='classes.php'>
             <div id='classplace'></div>
             <div id='target' style='display:none'>
               <input type='hidden' name='date' value="<?php echo date('Y-m-d H:i:s');?>"/>
@@ -163,7 +164,22 @@
             </div>
           </form>
       </div>
-    </div>
+</div>
 
-  </div>
+<div id="D">
+<h3> Reviews </h3>
+<?php
+  //$class = "<script>document.write(globalvariable)</script>";
+  $class='CS171';
+  $comment = "SELECT * FROM comments WHERE class='$class'";
+  $result = $conn->query($comment);
+  while($row = $result->fetch_assoc()){
+    echo "<div id='D1'>";
+    echo $row['date']."<br>";
+    echo $row['message']."<br>";
+    echo "</div>";
+  }
+ ?>
+</div>
 <script type="text/javascript" src="../phpfile/classpage.js"></script>
+<!-- _________________ DISPLAYING COMMENTS DOWN HERE  __________________ -->

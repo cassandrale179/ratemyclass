@@ -3,6 +3,7 @@ var val;
 var classavg = 0;
 var count = 0;
 var arr = [];
+var globalvariable;
 
 //------------- FUNCTION TO REDIRECT PAGE  ------------
 function searchBar()
@@ -47,6 +48,7 @@ function courseDisplay(){
 	var descriptionDisplay = document.getElementById("C1");
 	var wrapper = document.getElementById("wrapper");
 	var target = document.getElementById("classplace");
+	var review = document.getElementById("D");
 
 
 	//Pulling JSON data of course description
@@ -71,8 +73,10 @@ function courseDisplay(){
 
 		//Store local session values
 		var input = "<input name='class' type='hidden' value='" + permClass + "' />";
+		var phpcode =  "<?php echo 'something here'; ?>";
 		wrapper.insertAdjacentHTML('beforeend', input);
 		target.insertAdjacentHTML('beforeend', input);
+		review.insertAdjacentHTML('beforeend', phpcode);
 
 	}
 
@@ -88,6 +92,7 @@ function courseDisplay(){
 	 var reviewbtn = document.getElementById("review");
 	 var header = document.getElementById("header");
 	 var permClass = localStorage.getItem("val");
+	 globalvariable = permClass;
 
 
 	 //Pulling JSON data from internal file

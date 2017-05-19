@@ -6,8 +6,6 @@ body{
     background-size: cover;
     background-image: url(../images/gray.png);
     z-index: -3;
-    height: 650px;
-
 }
 
 button{
@@ -27,6 +25,14 @@ h1{
     margin-left: 14%;
     animation: fadein 2s;
 }
+h3{
+  text-align: center;
+  font-family: 'Noto Serif', sans-serif;
+  font-size: 60px;
+  color: #515A5A;
+  animation: fadein 2s;
+}
+
 
 h5{
   font-family: 'Roboto Condensed', sans-serif;
@@ -279,38 +285,17 @@ p{
 }
 
 #D{
-  margin-top: 700px;
   position: absolute;
-  background: black;
-
+  margin-top: 600px;
+  margin-left: 10%;
 }
 
 #D1{
-  position: absolute;
-  color: black;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-#D2{
-  background: black;
-  padding-left: 150px;
-  padding-bottom: 30px;
-  width: 121%;
-}
-#commentbox{
-  background-color: rgb(236, 240, 241);
-  padding: 20px;
-  width: 900px;
-}
 
-#reviewheader{
-  margin-top: 600px;
-  position: absolute;
-  margin-left: 150px;
-}
-
-
-/*This secion dowward is for sorting page */
+/* ----------- This secion dowward is for sorting page -----------  */
 
 #sortingbody{
   background: black;
