@@ -7,7 +7,7 @@ courseRequest.onload = function(){
   var data = JSON.parse(courseRequest.responseText);
 
   //------CONVERTING EVEN NUMBER LINES INTO STRING------
-  for (var j = 0; j < 1600; j+=2)
+  for (var j = 0; j < 1644; j+=2)
   {
     if (j % 2 == 0){
       var string = JSON.stringify(Object.values(data["classes"][j]));
@@ -32,7 +32,9 @@ courseRequest.onload = function(){
 
     //------DISPLAY THE RESULT------
 
-    var SQLtext = "INSERT INTO course(class) VALUES ('" + courseID + "');<br>";
+    var between = "','";
+    var college = "A";
+    var SQLtext = "INSERT INTO course(class, title, description, credit, college) VALUES ('" + courseID + between + title + between + credit + between + college + "');<br>";
     output.insertAdjacentHTML('beforeend', SQLtext);
 
   }
