@@ -5,7 +5,7 @@ courseRequest.open('GET', 'allclasses/Antoinette.json', true);
 courseRequest.onload = function(){
   var data = JSON.parse(courseRequest.responseText);
 
-  for (var j = 0; j < 1644; j++){
+  for (var j = 0; j < 1600; j++){
 
     //------ EVEN NUMBER LINES ARE CLASS TITLE ------
     if (j % 2 == 0){
