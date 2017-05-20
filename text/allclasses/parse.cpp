@@ -63,20 +63,8 @@ int main(){
       }
       //----- EXTRACT ID, TITLE AND CREDIT-------
       string id = str.substr(0,space[0]) + str.substr(space[0]+1, 3);
-      cout << id << endl;
-
-
-
-
-
-
-
-
-
-
-
-
-
+      string title = str.substr(space[1]+1, space[space.size()-2]-space[1]);
+      cout << title << endl;
       i++;
     }
 
