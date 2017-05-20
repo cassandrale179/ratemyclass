@@ -122,7 +122,7 @@ Repeat Status: Not repeatable for credit
 Restrictions: Cannot enroll if classification is Freshman
 
 INFO 240 Introduction to Data Science 3.0 Credits
-“Data Science” encompasses skills required for data intensive work. Students will deliver data science products and services through analysis, data transformation and data access techniques. The assignments will involve web programming, statistics, and the ability to manipulate data sets with code, following examples provided.
+Data Science encompasses skills required for data intensive work. Students will deliver data science products and services through analysis, data transformation and data access techniques. The assignments will involve web programming, statistics, and the ability to manipulate data sets with code, following examples provided.
 College/Department: College of Computing and Informatics
 Repeat Status: Not repeatable for credit
 Restrictions: Cannot enroll if classification is Freshman
@@ -294,7 +294,7 @@ Restrictions: Can enroll if classification is Junior or Senior.
 Prerequisites: (INFO 200 [Min Grade: D] or SE 210 [Min Grade: D]) and (CS 172 [Min Grade: D] or CS 265 [Min Grade: D] or INFO 152 [Min Grade: D] or SE 103 [Min Grade: D] or CS 176 [Min Grade: D])
 
 INFO 435 Information Services 3.0 Credits
-Examines electronic services that deliver "published" information to an organization from external sources. Relates these services to functions such as planning, marketing, and research. Shows ways of monitoring the organization's larger environments, such as the economy, government, competitors, and new technologies. This course introduces students to the core concepts of information services as they apply to the essential techniques for retrieving, analyzing, organizing and presenting information. The skills learned in this course are transferable to any information seeking activity whether it is in a large research and development lab, or a small start-up company. The overall goal of this course is that upon completion, each student can produce a systematic and accurate method for recovering, analyzing, and disseminating needed information in any setting.
+Examines electronic services that deliver published information to an organization from external sources. Relates these services to functions such as planning, marketing, and research. Shows ways of monitoring the organizations larger environments, such as the economy, government, competitors, and new technologies. This course introduces students to the core concepts of information services as they apply to the essential techniques for retrieving, analyzing, organizing and presenting information. The skills learned in this course are transferable to any information seeking activity whether it is in a large research and development lab, or a small start-up company. The overall goal of this course is that upon completion, each student can produce a systematic and accurate method for recovering, analyzing, and disseminating needed information in any setting.
 College/Department: College of Computing and Informatics
 Repeat Status: Not repeatable for credit
 Restrictions: Can enroll if classification is Junior or Senior.

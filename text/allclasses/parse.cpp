@@ -15,7 +15,7 @@ void print(vector <T> v){
 
 //----- READING IN THE FILE --------
 int main(){
-  ifstream is("CS.txt");
+  ifstream is("CI.txt");
   vector <string> v;
   string line;
   while(!is.eof()){
@@ -76,7 +76,7 @@ int main(){
       i++;
     }
 
-  ofstream os("CS2.txt");
+  ofstream os("output.txt");
   string x = "\",\"";
   for (unsigned int a = 0; a < idVec.size(); a++){
     os << "INSERT INTO course(class, title, description, credit, college) VALUES(\"";

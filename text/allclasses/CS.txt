@@ -187,7 +187,7 @@ Repeat Status: Not repeatable for credit
 Prerequisites: CS 260 [Min Grade: D] and CS 380 [Min Grade: D]
 
 CS 387 Game AI Development 3.0 Credits
-This course focuses on artificial intelligence (AI) techniques for computer games. Students will learn both basic and advanced AI techniques that are used in a variety of game genres including first-person shooters, driving games, strategy games, platformers, etc. The course will emphasize the difference between traditional AI and game AI, the latter having a strong design component, focusing on creating games that are “fun to play.” Topics include path-finding, decision-making, strategy and machine learning in games.
+This course focuses on artificial intelligence (AI) techniques for computer games. Students will learn both basic and advanced AI techniques that are used in a variety of game genres including first-person shooters, driving games, strategy games, platformers, etc. The course will emphasize the difference between traditional AI and game AI, the latter having a strong design component, focusing on creating games that are fun to play. Topics include path-finding, decision-making, strategy and machine learning in games.
 College/Department: College of Computing and Informatics
 Repeat Status: Not repeatable for credit
 Prerequisites: CS 260 [Min Grade: D] and CS 380 [Min Grade: D]
