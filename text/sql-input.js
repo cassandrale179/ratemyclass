@@ -1,6 +1,5 @@
 var output = document.getElementById('database');
 
-
 var courseRequest = new XMLHttpRequest();
 courseRequest.open('GET', 'allclasses/Antoinette.json', true);
 courseRequest.onload = function(){
