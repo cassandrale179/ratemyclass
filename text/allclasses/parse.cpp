@@ -76,8 +76,12 @@ int main(){
       i++;
     }
 
-  print(idVec);
-  print(titleVec);
-  print(creditVec);
-
+  ofstream os("CS2.txt");
+  string x = "\",\"";
+  for (unsigned int a = 0; a < idVec.size(); a++){
+    os << "INSERT INTO course(class, title, description, credit, college) VALUES(\"";
+    os << idVec[a] << x << titleVec[a] << x << description[a] << x << creditVec[a] << x << "CI";
+    os << "\");" << endl;
+    os << endl;
+  }
 }
