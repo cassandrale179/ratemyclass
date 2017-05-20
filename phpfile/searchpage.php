@@ -72,9 +72,6 @@ else {
 		<form method="post" action="searchpage.php">
 		<input type="text" name="q" id="searchbar" placeholder="Type Class Name Here..." list="classes"/>
 			<datalist id="classes">
-				<option value="CS164">
-				<option value="CS171">
-				<option value="CS172">
 			</datalist>
 
 	 </form>
@@ -82,6 +79,7 @@ else {
 	</div>
 
 
+<script src="datalist.js"></script>
 <script src="classpage.js"></script>
 
 </body>
