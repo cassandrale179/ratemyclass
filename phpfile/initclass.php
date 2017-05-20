@@ -51,7 +51,7 @@
    //UPDATE SUM AND COUNT IN DATABASE
    $update1 = "UPDATE course SET sum = sum + '$letter1', count = count + 1 WHERE class = '$class1'";
    $update2 = "UPDATE course SET sum = sum + '$letter2', count = count + 1 WHERE class = '$class2'";
-   $update3 = "UPDATE course SET sum = sum + '$letter3', count = count + 1  WHERE class = '$class3'";
+   $update3 = "UPDATE course SET sum = sum + '$letter3', count = count + 1 WHERE class = '$class3'";
 
   //CHECK TO MAKE SURE USER CAN ONLY ENTER A CLASS IN ONCE
   $three = $class1. "," .$class2. ",". $class3.",";

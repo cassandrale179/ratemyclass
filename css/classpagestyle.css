@@ -280,6 +280,7 @@ p{
   position: absolute;
   margin-top: 550px;
   margin-left: 10%;
+  margin-bottom: 100px;
 }
 
 #D1{
@@ -287,8 +288,8 @@ p{
   font-size: 15px;
   background-color: rgba(213, 216, 220,0.7);
   padding: 20px;
-  margin-bottom: 100px;
   width: 1030px;
+  margin-bottom: 20px;
 }
 
 
