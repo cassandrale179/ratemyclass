@@ -7,9 +7,9 @@ using namespace std;
 template <typename T>
 void print(vector <T> v){
   for (unsigned int i = 0; i < v.size(); i++){
-    cout << v[i] << ",";
+    cout << v[i] << endl;
   }
-  cout << endl;
+  cout << "------------------------------------" << endl;
 }
 
 
@@ -29,11 +29,16 @@ int main(){
     if (v[i] == "") pos.push_back(i);
   }
 
-  //-----PARSE STUFF-----
+  //------ VECTOR TO BE USED--------
   vector <string> info;
   vector <string> description;
   vector <string> college;
   vector <string> other;
+  vector <string> idVec;
+  vector <string> titleVec;
+  vector <string> creditVec;
+
+  //-----PARSE STUFF-----
   unsigned int j = 0;
   int k = 0;
   while(j < pos.size())
@@ -63,10 +68,16 @@ int main(){
       }
       //----- EXTRACT ID, TITLE AND CREDIT-------
       string id = str.substr(0,space[0]) + str.substr(space[0]+1, 3);
+      idVec.push_back(id);
       string title = str.substr(space[1]+1, space[space.size()-2]-space[1]);
-      cout << title << endl;
+      titleVec.push_back(title);
+      string credit = str.substr(space[space.size()-2]+1, 4);
+      creditVec.push_back(credit);
       i++;
     }
 
+  print(idVec);
+  print(titleVec);
+  print(creditVec);
 
 }
