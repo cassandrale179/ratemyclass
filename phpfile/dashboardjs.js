@@ -18,7 +18,7 @@ function calculateChart(){
 	request.send();
 }
 
-function displayPieChart(as, h, l, cci, edu, engr, entp, hos, west){
+function displayChart(as, h, l, cci, edu, engr, entp, hos, west){
 		Chart.defaults.global.defaultFontFamily = 'Roboto Condensed';
 		Chart.defaults.global.defaultFontSize = 14;
 		var ctx = $('#canvas');

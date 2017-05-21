@@ -15,7 +15,7 @@ void print(vector <T> v){
 
 //----- READING IN THE FILE --------
 int main(){
-  ifstream is("CI.txt");
+  ifstream is("CS.txt");
   vector <string> v;
   string line;
   while(!is.eof()){
