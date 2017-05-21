@@ -17,6 +17,7 @@ Input at least 3 grades (e.g A, B, B+) for 3 classes of which you have taken (e.
   5. Settings is where you can change your password, as well as communicating with us if you have any issue using the website through the contact form.
   6. Click log out to safely destroy your login session. If you do not click log out, next time you browse, the website will automatically log you onto the dashboard if you don't clear your cache. We do not recommend this if you are using a public computer. 
   <img width="780" alt="c1" src="https://cloud.githubusercontent.com/assets/22923895/26280708/1f223808-3dad-11e7-94aa-dfd8720d68a1.PNG">
+  
 ### 5. Reviewing
 In addition to viewing a class's difficulty, Ratemyclass also contains a built in commenting system where you can submit anonymous review for a class. We know that quantitative data alone will not always sufficiently communciate the whole picture, so feel free to give your opinion on a class's difficulty.  
   
