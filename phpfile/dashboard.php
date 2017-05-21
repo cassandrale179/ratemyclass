@@ -81,51 +81,5 @@
 			}
 		 ?>
 	</div>
-
-
-	<!-- Script for the Bar Chart -->
-	<script>
-		Chart.defaults.global.defaultFontFamily = 'Roboto Condensed';
-		Chart.defaults.global.defaultFontSize = 14;
-		var ctx = $('#canvas');
-		var options = {
-    	maintainAspectRatio: false,
-    	responsive: false,
-    	scales: {
-    		xAxes: [{
-    			ticks:{
-    				fontFamily: 'Roboto Condensed',
-    			}
-    		}],
-    		yAxes: [{
-    			ticks:{
-    				fontFamily: 'Roboto Condensed',
-    			}
-    		}]
-    	}
-	};
-		var data = {
-    labels: ['Arts & Science', 'Health', 'Lebow', 'CCI', 'Education', 'Engineering',
-    'Entrepreneur', 'Hospitality', 'Westphal'],
-    datasets: [
-        {
-            label: 'AVERAGE FINAL GRADE ACROSS COLLEGES (DREXEL)',
-            backgroundColor: 'rgba(75,192,192,0.4)',
-            borderColor: 'rgba(75,192,192,1)',
-            pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-            pointHoverBorderColor: 'rgba(220,220,220,1)',
-            pointHoverBorderWidth: 2,
-            pointRadius: 1,
-            pointHitRadius: 10,
-            data: [3.3, 2.5, 3.4, 3.3, 1.9, 3.2, 3.6, 2,4, 0],
-        }
-    ]
-};
-		var myBarChart = new Chart(ctx, {
-		    type: 'bar',
-		    data: data,
-		    options: options
-		});
-	</script>
-
+<script type="text/javascript" src="dashboardjs.js"></script>
 </body>

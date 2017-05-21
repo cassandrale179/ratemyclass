@@ -181,6 +181,10 @@ function courseDisplay(){
 			reviewbtn.style.background = "#C0392B";
 			changeHover(c1,c2);
 		}
+		else{
+			classLabel = "No Data";
+			alert("No data exists for this class yet. Invite more Drexel students to join and build data");
+		}
 		displayPieChart(a,b,c,d,f,c1,c2,c3,c4,h1,h2,h3,h4);
 
 		//display Text
