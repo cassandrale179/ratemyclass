@@ -14,8 +14,8 @@ Input at least 3 grades (e.g A, B, B+) for 3 classes of which you have taken (e.
   3. If you cannot find a class's name when search, let us know through the contact form on the Settings page. Certain classes such as Independent Study or Special Topics are not yet entered into our database. At the moment, Ratemyclass only contained classes with high volume of students. 
   3. Sorting is where you can choose a major's name (e.g Computer Science) and choose a sorting order (Easiest->Hardest or Hardest->Easiest) and you will be redirected to a page that listed the classes out in your sorting orde
   4. Input grade is where you can enter grade for classes you have taken, and you can input as many classes are you want.
-  - Settings is where you can change your password, as well as communicating with us if you have any issue using the website through the contact form.
-  5. Click log out to safely destroy your login session. If you do not click log out, next time you browse, the website will automatically log you onto the dashboard if you don't clear your cache. We do not recommend this if you are using a public computer. 
+  5. Settings is where you can change your password, as well as communicating with us if you have any issue using the website through the contact form.
+  6. Click log out to safely destroy your login session. If you do not click log out, next time you browse, the website will automatically log you onto the dashboard if you don't clear your cache. We do not recommend this if you are using a public computer. 
 ### 5. Reviewing
 In addition to viewing a class's difficulty, Ratemyclass also contains a built in commenting system where you can submit anonymous review for a class. We know that quantitative data alone will not always sufficiently communciate the whole picture, so feel free to give your opinion on a class's difficulty.  
   
