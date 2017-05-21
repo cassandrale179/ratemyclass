@@ -24,7 +24,6 @@ In addition to viewing a class's difficulty, Ratemyclass also contains a built i
 ## How It Works
 - <b> The class ranking is built on the following formula: </b> if class average > 3.30, it is easy. If class average > 2.60, it is medium. Below that is hard. This is graded on a 4.0 scale with 4 = A, 3 = B, 2 = C, 1 = D, and 0 = F. For more information, check out Drexel University's official [GPA calculation.](http://drexel.edu/drexelcentral/transcripts/grades/gpa-calculation/) 
 - <b>Disclaimer</b>: since the classifier (easy, medium, and hard) is based on a formula, it is NOT the ultimate one-fit-all answer on whether a class is easy or hard for you. Class's difficulty also depend on other factor such as your's enjoyment of the class and your skills. A programming class might be easy for a computer science major but not for an arts student and vice versa. So don't blame us if a class turn out to be hard for you even though it says easy on our website, because the demographics of students who are taking that class might be disimilar from you :) 
-- With that being said, Ratemyclass serve mainly as a gateway for big data sharing, therefore, allowing you some insight on how class score is distributed. 
 
 ## Other Important Information
 - As this involves data sharing of user scores, Ratemyclass has a Privacy Policy. Check our website for more information. 
