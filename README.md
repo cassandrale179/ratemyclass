@@ -9,13 +9,13 @@ A 4-digit PIN code will be generated and send to your Drexel's email address. Fr
 ### 3. Input at least 3 grades 
 Input at least 3 grades (e.g A, B, B+) for 3 classes of which you have taken (e.g CS171, CS172, CS164). After you have done so, you will be redirected to a dashboard. 
 ### 4. Functionalities:
-  1. Dashboard is where you can see the grade distribution across all colleges within the University (e.g College of Arts and Science, College of Computing and Informatics...etc.) 
-  2. Search bar is where you can find a class's name. Click on the datalist option to redirect to the class's page. You will be able to see how many people have taken this class, how many receive A, B, C...etc., as well as class score. 
-  3. If you cannot find a class's name when search, let us know through the contact form on the Settings page. Certain classes such as Independent Study or Special Topics are not yet entered into our database. At the moment, Ratemyclass only contained classes with high volume of students. 
-  3. Sorting is where you can choose a major's name (e.g Computer Science) and a sorting order (Easiest->Hardest or Hardest->Easiest). You will be redirected to a page that listed the classes out in your sorting order. 
-  4. Input grade is where you can enter grade for classes you have taken, and you can input as many classes are you want.
-  5. Settings is where you can change your password, as well as communicating with us if you have any issue using the website through the contact form.
-  6. Click log out to safely destroy your login session. If you do not click log out, next time you browse, the website will automatically log you onto the dashboard if you don't clear your cache. We do not recommend this if you are using a public computer. 
+  1. <b> Dashboard </b> is where you can see the grade distribution across all colleges within the University (e.g College of Arts and Science, College of Computing and Informatics...etc.) 
+  2. <b> Search bar </b> is where you can find a class's name. Click on the datalist option to redirect to the class's page. You will be able to see how many people have taken this class, how many receive A, B, C...etc., as well as class score. 
+  3. <b> If you cannot find a class's name when search, </b> let us know through the contact form on the Settings page. Certain classes such as Independent Study or Special Topics are not yet entered into our database. At the moment, Ratemyclass only contained classes with high volume of students. 
+  3. <b> Sorting </b> is where you can choose a major's name (e.g Computer Science) and a sorting order (Easiest->Hardest or Hardest->Easiest). You will be redirected to a page that listed the classes out in your sorting order. 
+  4. <b> Input grade </b> is where you can enter grade for classes you have taken, and you can input as many classes are you want.
+  5. <b> Settings </b> is where you can change your password, as well as communicating with us if you have any issue using the website through the contact form.
+  6. <b> Click log out </b> to safely destroy your login session. If you do not click log out, next time you browse, the website will automatically log you onto the dashboard if you don't clear your cache. We do not recommend this if you are using a public computer. 
 
   
 ### 5. Reviewing
