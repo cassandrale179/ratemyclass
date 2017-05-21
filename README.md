@@ -5,7 +5,7 @@ RateMyClass is an open source project created at Drexel University that allow st
 ### 1. Register an account. 
 Account must be registered with a Drexel University's email address. This is for verification purpose so that grade are only inputted from Drexel students, and not from outsiders. Attempt to register with a non-Drexel University email will result in failure. 
 ### 2. Create an anonymous username and password. 
-A 4-digit PIN code will be generated and send to your Drexel's email address. From now on, you can log in with these credentials. If you forgot your username or password, click "Forgot My Password" and an email will be send to your Drexel Universit's email address containing your username and password. 
+A 4-digit PIN code will be generated and send to your Drexel's email address. Put that 4 digit code in the verification page. From now on, you can log in with your username and password. If you forgot your credentials, click "Forgot My Password" and an email will be send to your Drexel University's email address containing your username and password. 
 ### 3. Input at least 3 grades 
 Input at least 3 grades (e.g A, B, B+) for 3 classes of which you have taken (e.g CS171, CS172, CS164). After you have done so, you will be redirected to a dashboard. 
 ### 4. Functionalities:
