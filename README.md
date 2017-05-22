@@ -18,7 +18,7 @@ Input at least 3 grades (e.g A, B, B+) for 3 classes of which you have taken (e.
 
 
 ### 5. Reviewing
-In addition to viewing a class's difficulty, Ratemyclass also contains a built in commenting system where you can submit anonymous review for a class. Quantitative data alone will not always sufficiently communciate the whole picture, so feel free to give your opinion on a class's difficulty.  
+In addition to viewing a class's difficulty, Ratemyclass also contains a built in commenting system where you can submit anonymous review for a class. Since quantitative data alone will not always sufficiently communciate the whole picture, feel free to give your subjective opinion on a class's difficulty.  
 
 ## How It Works
 - <b> The class ranking is built on the following formula: </b> if class average > 3.30, it is easy. If class average > 2.60, it is medium. Below that is hard. This is graded on a 4.0 scale with 4 = A, 3 = B, 2 = C, 1 = D, and 0 = F. For more information, check out Drexel University's official [GPA calculation.](http://drexel.edu/drexelcentral/transcripts/grades/gpa-calculation/)
@@ -28,7 +28,7 @@ In addition to viewing a class's difficulty, Ratemyclass also contains a built i
 - As this involves data sharing of user scores, Ratemyclass has a <b> Privacy Policy </b>. Check the website for more information.
 - <b> You can only submit your grade once, </b> so make sure you enter the correct grade. This functionality is implemented in PHP to prevent user from submitting multiple grade for the same class, which could lead to skewing the grade data.
 - If you have any suggestions, find a bug, or just want to comment, feel free to contact me through the contact form on the settings page or shoot me an email at mnl98x@gmail.com.
-- This website is built mostly from scratch both front end and back end so there are still some slight issues in term of user interface and data performance. <b> Please DO NOT open the website on your mobile phone. </b> This website is not configured for mobile, sorry :)
+- This website is built from scratch both front end and back end so there are still some slight issues in term of user interface and data performance. <b> Please DO NOT open the website on your mobile phone. </b> This website is not configured for mobile, sorry :)
 
 ## Contributing
 1. Pull/Fork
