@@ -25,7 +25,7 @@ In addition to viewing a class's difficulty, Ratemyclass also contains a built i
 - <b>Disclaimer</b>: since the classifier (easy, medium, and hard) is based on a formula, it is NOT the ultimate one-fit-all answer on whether a class is easy or hard for you. Class's difficulty also depend on other factor such as your enjoyment of the class and your skills. A programming class might be easy for a computer science major but not for an arts student and vice versa. So don't blame me if a class turn out to be hard for you even though it says easy on our website, because the demographics of students who are taking that class might be disimilar from you :)
 
 ## Other Important Information
-- As this involves data sharing of user scores, Ratemyclass has a <b> [Privacy Policy] (http://www.ratemyclass.org/rmc/terms/privacy.html) </b>. Check the website for more information.
+- As this involves data sharing of user scores, Ratemyclass has a <b> Privacy Policy </b>. Check the website for more information.
 - <b> You can only submit your grade once, </b> so make sure you enter the correct grade. This functionality is implemented in PHP to prevent user from submitting multiple grade for the same class, which could lead to skewing the grade data.
 - If you have any suggestions, find a bug, or just want to comment, feel free to contact me through the contact form on the settings page or shoot me an email at mnl98x@gmail.com.
 - This website is built from scratch both front end and back end so there are still some slight issues in term of user interface and data performance. <b> Please DO NOT open the website on your mobile phone. </b> This website is not configured for mobile, sorry :)
