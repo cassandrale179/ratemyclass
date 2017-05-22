@@ -1,8 +1,17 @@
 function calculateChart(){
 
-	var CIsum = 0;
-	var CIcount = 0;
+	//----- INITIALIZE THE SUM AND COUNT OF THE MAJORS --------
+	var ASsum = 0; var AScount = 0;
+	var Hcount = 0; var Hsum = 0;
+	var Bsum = 0; var Bcount = 0;
+	var CIsum = 0; var CIcount = 0;
+	var Esum = 0; var Ecount = 0;
+	var Tsum = 0; var Tcount = 0;
+	var SHsum = 0; var SHcount = 0;
+	var Asum = 0; var Acount = 0;
+	var ENTPsum = 0; var ENTPcount = 0;
 
+	//------ MAKE AN AJAX REQUEST TO THE SERVER ----------
 	var request = new XMLHttpRequest();
   request.open('GET', 'file2.php', true);
 	request.onload = function(){
@@ -13,12 +22,13 @@ function calculateChart(){
 				CIcount = CIcount + parseFloat(data[i].count);
 			}
 		}
-		displayChart(0, 0, 0, CIsum/CIcount, 0, 0, 0, 0, 0);
+		displayChart(ASsum / AScount, Hsum / Hcount, Bsum/Bcount, Tsum/Tcount, CIsum/CIcount, Esum/Ecount, SHsum/SHcount, Asum/Acount, ENTPsum/ENTPcount);
 	}
 	request.send();
 }
 
-function displayChart(as, h, l, cci, edu, engr, entp, hos, west){
+//--------------- FUNCTION TO DISPLAY THE CHART -------------------
+function displayChart(as, h, l, cci, edu, engr, hos, west, entp){
 		Chart.defaults.global.defaultFontFamily = 'Roboto Condensed';
 		Chart.defaults.global.defaultFontSize = 14;
 		var ctx = $('#canvas');
@@ -61,6 +71,5 @@ function displayChart(as, h, l, cci, edu, engr, entp, hos, west){
 		    options: options
 		});
 }
-
 
 calculateChart();
