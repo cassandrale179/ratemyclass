@@ -1,19 +1,19 @@
 function calculateChart(){
 
-	//ARRAY TO HOLD GRADE OF ALL THE COLLEGES IN DREXEL
-	var asArr = [];
-	var cciArr = [];
-	var hosArr = [];
-	var eduArr = [];
-	var engrArr = [];
-	var entpArr = [];
-	var healthArr = [];
-	var westArr = [];
+	var CIsum = 0;
+	var CIcount = 0;
 
 	var request = new XMLHttpRequest();
   request.open('GET', 'file2.php', true);
 	request.onload = function(){
-		var data =
+		var data = JSON.parse(request.responseText);
+		for (var i = 0; i < data.length; i++){
+			if (data[i].college == "CI"){
+				CIsum = CIsum + parseFloat(data[i].sum);
+				CIcount = CIcount + parseFloat(data[i].count);
+			}
+		}
+		displayChart(0, 0, 0, CIsum/CIcount, 0, 0, 0, 0, 0);
 	}
 	request.send();
 }
@@ -63,4 +63,4 @@ function displayChart(as, h, l, cci, edu, engr, entp, hos, west){
 }
 
 
-//calculateChart();
+calculateChart();
