@@ -49,7 +49,7 @@ function displayChart(as, h, l, cci, edu, engr, hos, west, entp){
     	}
 	};
 		var data = {
-    labels: ['Arts & Science', 'Health', 'Lebow', 'CCI', 'Education', 'Engineering',
+    labels: ['Arts & Science', 'Health', 'Lebow', 'Education', 'CCI', 'Engineering',
     'Entrepreneur', 'Hospitality', 'Westphal'],
     datasets: [
         {

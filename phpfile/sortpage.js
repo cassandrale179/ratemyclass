@@ -59,9 +59,10 @@ function sortClass(){
 
     //-----------SELECTIVELY CHOOSE CLASS BELONGING TO THE MAJOR ----------
     for (var i = 0; i < data.length; i++){
-      if(data[i].class.substring(0, data[i].class.length-3) == permMajorSort){
+      if(data[i].class.substring(0,data[i].class.length-3) == permMajorSort){
         oldClass.push(data[i].class);
         var average = Math.round(parseFloat(data[i].sum)  / parseFloat(data[i].count) * 100) / 100;
+        if (isNaN(average)) average = 0;
         oldAvg.push(average);
       }
     }
@@ -88,6 +89,9 @@ function sortClass(){
       if (newAvg[m] > 3.30) colorArray.push("#117864");
       else if (newAvg[m] > 2.60) colorArray.push("#F4D03F");
       else if (newAvg[m] > 0) colorArray.push("#922B21");
+      else{
+        colorArray.push("#424949");
+      }
     }
 
     //-------------------- IF NO LOCAL STORAGE VALUE --------------------

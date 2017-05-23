@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300');
 
 body{
-    background-image: url(http://media.idownloadblog.com/wp-content/uploads/2016/08/iPad_Tablet_pure_minimal.png);
+    background-image: url(../images/gray.png);
     background-size: cover;
     z-index: -3;
     height: 2000px;
