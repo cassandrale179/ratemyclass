@@ -127,108 +127,16 @@ p{
     padding-top: 10px;
 }
 
+#wrapper{
+  display: flex;
+}
 
 #B{
   position: absolute;
-  width: 900px;
-  height:400px;
-  margin-top:200px;
-  margin-left: 20%;
-  display: flex;
-
+  margin-top: 200px;
+  margin-left: 25%;
 }
 
-#class{
-  width: 400px;
-  height: 70px;
-  border: none;
-  background-color: rgba(0,0,0,0.7);
-  color: white;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 20px;
-}
-
-
-#grade{
-  width: 150px;
-  height: 70px;
-  border: none;
-  background-color: rgba(0,0,0,0.7);
-  color: white;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 20px;
-  margin-left: 20px;
-}
-
-#year{
-  width: 150px;
-  height: 70px;
-  border: none;
-  background-color: rgba(0,0,0,0.7);
-  color: white;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 20px;
-  margin-left: 20px;
-}
-
-
-#B1 input{
-  width: 400px;
-  height: 70px;
-  border: none;
-  background-color: rgba(0,0,0,0.1);
-  font-family: 'Roboto Condensed', sans-serif;
-  padding-left: 20px;
-
-}
-
-
-#B2 input{
-  width: 150px;
-  height: 70px;
-  border: none;
-  margin-left: 20px;
-  background-color: rgba(0,0,0,0.1);
-  font-family: 'Roboto Condensed', sans-serif;
-  box-shadow: rgba(0,0,0,0.1);
-  padding-left: 20px;
-
-}
-
-#B3 input{
-  width: 150px;
-  height: 70px;
-  border: none;
-  margin-left: 20px;
-  background-color: rgba(0,0,0,0.1);
-  font-family: 'Roboto Condensed', sans-serif;
-  box-shadow: rgba(0,0,0,0.1);
-  padding-left: 20px;
-
-}
-
-
-::webkit-input-placeholder{
-    color: #626567;
-
-}
-
-#C{
-  position: absolute;
-  margin-top: 350px;
-  margin-left: 20%;
-}
-
-#C button{
-  background: rgba(0,0,0,0.7);
-  padding: 20px;
-  border: none;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 15px;
-  color: white;
-  border-radius: 2px;
-  margin-top: 10px;
-  width: 740px;
-
-
+#B1{
+  width: 33%;
 }

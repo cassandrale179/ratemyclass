@@ -1,7 +1,7 @@
 <head>
 	<meta charset="utf-8">
  	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
-	<title>Search Page</title>
+	<title>Input Grade</title>
 
 	<!-- Latest compiled and minified CSS -->
  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -49,38 +49,5 @@
 		<div id="A6">
 			<a href='logout.php'><button id="Abtn" name="logout"> LOGOUT </button></a>
 		</div>
-	</div>
-
-	<div id="B">
-		<div id="B1">
-			<button id="class"> Class Name </button>
-			<form>
-				<input type="text" placeholder="Enter a class here" list="classes"/>
-				<datalist id="classes">
-					<option value="MATH 221">
-					<option value="CS 171">
-					<option value="CS 260">
-					<option value="CS 164">
-				</datalist>
-			</form>
-		</div>
-		<div id="B2">
-			<button id="grade"> Grade </button>
-			<form>
-				<input type="text" placeholder="A+"/>
-
-			</form>
-		</div>
-		<div id="B3">
-			<button id="year"> Year </button>
-			<form>
-				<input type="text" placeholder="2014"/>
-			</form>
-		</div>
-	</div>
-
-
-	<div id="C">
-			 <button id="inputSubmit"> ADD MORE + </button>
 	</div>
 </body>
