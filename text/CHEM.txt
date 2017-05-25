@@ -1,0 +1,109 @@
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM050","Preparatory Chemistry ","This online course covered general chemical principles, such as stoichiometry, atomic and molecular structure, and characterization of chemical reactions.","0.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM100","Chemistry ","Chemistry and its significance to industry and life, with discussions revolving around synthesis and use of polymers and biologically significant molecules.","2.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM101","General Chemistry I ","Covers fundamental principles of chemistry, stoichiometry, atomic and molecular structure, chemical bonding, states of matter, thermochemistry, and periodicity.","3.5 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM102","General Chemistry II ","Covers chemical equilibrium, including acid-base equilibria in solution; electrochemistry; organic chemistry; polymers; and petroleum.","4.5 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM103","General Chemistry III ","Covers organic functional groups, biochemistry, inorganic and coordination compounds, chemical kinetics, thermodynamics, and nuclear chemistry.","5.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM108","Health Chemistry I ","Covers physical and chemical properties of substances used in medical areas and related principles: atomic structure, bonding, gases, solutions, acids and bases, oxidation-reduction and the chemistry of hydrocarbon compounds and polymers. Examples are taken from pharmacology, nutrition and other allied health fields.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM110","Environmental Chemistry ","Chemistry of the environment; the ecological aspects. Discussion of problems related to the pollution of the atmosphere, natural waters, and soil from a chemists point of view.","2.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM111","General Chemistry I ","Not open to engineering or science majors. Introduces the principles of general chemistry. Covers SI units, unit factor calculations, states of matter, elements and compounds, energy, atoms, electronic configurations, ionic and covalent bonds, Lewis dot structures, shapes of molecules, chemical equations, stoichiometry, molarity, gas laws, nuclear chemistry, equilibrium between different states of matter, and some colligative properties of solutions.","4.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM112","General Chemistry II ","Introduces organic chemistry. Covers some classes of organic compounds from alkanes to amines, basic reactions of important functional groups, uses of some compounds, stereochemistry, synthetic and natural polymers (carbohydrates, protein, DNA), and briefly acids and bases.","4.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM113","General Chemistry I Laboratory ","Covers chemical and physical properties and techniques for inorganic, organic, and polymeric compounds, including distillation, crystallization, chromatography, separation.","1.5 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM114","General Chemistry II Laboratory ","Continuation of CHEM 113.","1.5 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM121","Majors Chemistry I ","Part I in an introductory sequence for chemistry majors. Covers fundamental principles of atomic and molecular nature of matter, electronic structure, physic-chemical properties, periodicity, chemical reactions, stoichimoetry, thermochemistry, chemical bonding, properties of gases, and nuclear chemistry. Course includes weekly lab experiments.","5.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM122","Majors Chemistry II ","Part II in an introductory sequence for chemistry majors. Covers physical properties of liquids and solids, kinetics, equilibrium, solutions, acids and bases, thermodynamics, and electrochemistry. Course includes weekly lab experiments.","5.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM123","Majors Chemistry III ","Part III in an introductory sequence for chemistry majors. Course covers physical and chemical properties of substances used in consumer products through an introduction to fundamental structures, nomenclature and properties of hydrocarbons, organize functional groups, polymers and biomolecules. Course includes weekly lab experiments.","5.5 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM151","Applied Chemistry ","For business majors. Covers physical and chemical properties of substances used in consumer products. Provides qualitative introduction to required principles, including atomic structure and the elements, bonding and compounds, and the chemistry of carbon compounds and polymers. Uses examples from the areas of food and nutrition, pharmacology, and the petrochemical industry.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM161","General Chemistry I ","Covers atomic structure, stoichiometry, gases, valence theory, and thermochemistry.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM162","General Chemistry II ","Covers solutions, colligative properties, chemical equilibrium, and electrochemistry. Introduces organic chemistry.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM163","General Chemistry III ","Continues organic chemistry. Introduces thermodynamics, molecular biology, inorganic chemistry, chemical kinetics, and nuclear chemistry.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM164","General Chemistry Laboratory I ","Involves experiments demonstrating the principles of gas behavior, thermochemistry, colligative properties, chemical equilibrium, and electrochemistry. Some or all pre-requisites may be taken as either a pre-requisite or co-requisite. Please see the department for more information.","2.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM165","General Chemistry Laboratory II ","Involves experiments illustrating the principles of organic separations, transition metal chemistry, complex ions, chemical kinetics, and qualitative analysis. Some or all pre-requisites may be taken as either a pre-requisite or co-requisite. Please see the department for more information.","2.5 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM201","Why Things Work: Everyday Chemistry ","Course will cover chemical explanations of everyday materials and phenomena. The focus will be conceptual understanding, as opposed to a detailed quantitative treatment.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM230","Quantitative Analysis ","Covers chemical analysis and data treatment, including chemical equilibrium, acid-base and redox reactions, and applications to gravimetric and titrimetric methods.","4.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM231","[WI] Quantitative Analysis Laboratory ","Provides laboratory studies in quantitative analysis. This is a writing intensive course. Some or all pre-requisites may be taken as either a pre-requisite or co-requisite. Please see the department for more information.","2.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM241","Organic Chemistry I ","Covers structure, reactions, and stereochemistry of organic compounds, especially alkanes, cycloalkanes, haloalkanes, and alkenes. Also covers SN1, SN2, E1, and E2 compound.","4.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM242","Organic Chemistry II ","Covers structure, reactivity, and stereochemistry of organic compounds, especially alkanes, alkynes, alcohols, ethers, dienes, and aromatic compounds. IR, MS, and NMR spectral techniques are introduced and applied to the identification of organic compounds.","4.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM243","Organic Chemistry III ","Covers structure, preparation, reactivity, and stereochemistry of organic compounds, especially substituted aromatics, aldehydes, ketones, carboxylic acids, carboxylic acid halides, anhydrides, amides, polypeptides, esters, amines, phenols, and carbohydrates.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM244","Organic Chemistry Laboratory I ","Introduces simple recrystallization, distillation, extraction, and chromatography techniques and applies them to several organic reactions illustrative of topics covered in CHEM 241. Provides opportunity to take and interpret IR and GC spectra.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM245","Organic Chemistry Laboratory II ","Provides experiments illustrating a number of organic reactions covered in CHEM 242 as well as more advanced organic techniques. Provides opportunity to take and interpret IR and GC scans. Some or all pre-requisites may be taken as either a pre-requisite or co-requisite. Please see the department for more information.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM246","Organic Chemistry for Majors I ","This course offers a basic foundation for modern organic chemistry. Lecture topics include: the chemistry of alkanes, cycloalkanes, alkyl halides, alkenes, cycloalkenes, and alkynes, free radical substitution, nucleophilic substitution, elimination, ionic addition, and free radical addition reactions. Lab topics include recrystallization, distillation, chromatography, liquid-liquid extraction, and simple chemical reactions, including an elimination reaction to prepare an alkene and several substitution reactions to prepare alkyl halides. Introduction to the use of IR and 1-H NMR as structure identification tools.","6.5 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM248","Organic Chemistry for Majors II ","This course continues developing the basic foundation of modern organic chemistry started in CHEM 246. Lecture topics include the chemistry of alcohols, ethers, conjugated systems, aromatic compounds and thiols. The principles of IR, MS, 1-H and 13-C NMR will be taught in lecture and put to use in identifying products in the lab. Other lab topics include the preparation of alcohols, a Grignard synthesis, an alkene addition reaction, an aromatic nitration, a Friedel-Crafts reaction, the preparation of ferrocene, and how to safely handle water-sensitive chemicals.","6.5 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM249","Organic Chemistry for Majors III ","This course completes development of the basic foundation of modern organic chemistry started in CHEM 246. Lecture topics include the chemistry of aldehydes, ketones, amines, carboxylic acids & their derivatives, carbohydrates, organometallic compounds, and multi-step organic synthesis. Asymmetric synthesis and C,C-bond forming reactions will also be covered. Lab topics include the multi-step syntheses of benzocaine and DEET, stereochemical inversion, diazonium coupling, Aldol condensation, sequential Diels-Alder and lactonization reactions, and the principles of functional group protection.","7.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM251","Physical Chemistry I ","Introduces physical chemistry. Topics include quantum chemistry, operators, the uncertainty principle, deBroglie wavelength, particle in a box, hydrogen-like atoms, aufbau principle, commutators, normalization, LCAO-MO, variation principle, diatomic molecules, Heckel approximation, harmonic oscillator, conjugated systems, electronic and vibrational spectroscopy, and selection rules.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM253","Thermodynamics and Kinetics ","Covers gas properties, gas laws, state functions, first, second, and third laws of thermodynamics, phase transformations, phase diagrams, chemical equilibrium, spontaneous reactions, Gibbs free energy, molecular motion, diffusion, rates of chemical reactions, rate laws, molecular reaction dynamics, transition states, electron transfer.","4.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM256","Physical Chemistry for Biological Sciences ","Covers elementary chemical thermodynamics and homogeneous reaction kinetics as bases for experiment and phenomenology in biology and biochemistry, including properties of molecules in solution.","4.5 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM270","Software Skills for Chemists ","Course covers mathematical, computational, and professionals skills useful to chemists. Representation of chemical problems in mathematical language; use of software to: solve mathematical problems that arise in chemistry; process, analyze and present data; visualize and analyze molecular structures. Also covers the American Chemical Society guidelines for professionalism in chemistry.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM346","Qualitative Organic Chemistry ","Covers identification of pure organic compounds, physical constants, solubilities by semi-micro techniques, infrared and nuclear magnetic resonance spectroscopy, and separation and identification of mixtures.","5.5 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM355","Physical Chemistry IV ","Computational methods of modeling molecules; Covers potential energy functions and surfaces, molecular conformations, failures of classical physics, the quantum hypothesis, the classical wave equation and the origins of the Schrodinger equation, particle-in-a-box, linear variation functions, molecular orbitals from linear combinations of atomic orbitals, Pauli principle, molecular calculations and their interpretation.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM356","Physical Chemistry Laboratory ","Provides experiments in physical chemistry for engineering students. Some or all pre-requisites may be taken as either a pre-requisite or co-requisite. Please see the department for more information.","2.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM357","[WI] Physical Chemistry Laboratory I ","Provides experiments illustrative of topics included in CHEM 251 and CHEC 352. This is a writing intensive course. Some or all pre-requisites may be taken as either a pre-requisite or co-requisite. Please see the department for more information.","2.5 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM358","Physical Chemistry Laboratory II ","Continues CHEM 357.","2.5 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM359","Atomic and Molecular Spectroscopy ","Emission and absorption of light, laser principles, optical spectrometers, atomic spectroscopy. LS-coupling, Zeeman effect, magnetic resonance spectroscopy, EPR, NMR, ENDOR, molecular spectroscopy of diatomic and polyatomic molecules, rotational, vibrational and electronic, fluorescence spectroscopy, two-photon spectroscopy, time resolved spectroscopy, photo-electron spectroscopy.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM361","Advanced Organic Chemistry Laboratory ","Emphasizes experimental design, data collection, and interpretation in such areas as reaction mechanism and molecular structure determination. Not offered every year.","2.5 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM364","Spectroscopic Analysis ","Covers interpretation of spectra for the determination of structure of organic molecules. Stresses use of infrared, nuclear magnetic resonance, and mass spectrometry. Fall. Not offered every year.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM367","Chemical Information Retrieval ","This course examines methods for retrieving literature information, via standard tabulations, journals, and abstracts, using both hard-copy and electronic sources. Includes techniques for online searching of databases such as Chemical Abstracts, Beilstein, and crystallographic depositories.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM371","Chemistry of Biomolecules ","This course is a chemistry-based approach to understanding the basic structure, chemical reactivity, and biological function of biomolecules including amino acids, peptides, proteins, carbohydrates, nucleic acids, and lipids. A special emphasis will be given to topics in the frontiers of biomolecular research at the interface between chemistry and biology.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM420","Molecular Symmetry and Group Theory Applied Chemistry ","Applies the principles of simple group theory to molecular structure and to electronic and motional properties of molecules, including crystal field and molecular orbital methods.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM421","Inorganic Chemistry I ","Covers crystal, atomic, and molecular structure; modern chemical bonding; and magnetic properties of inorganic systems.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM422","Inorganic Chemistry II ","Covers organometallic and coordination compounds, substitution mechanisms, and bio-inorganic chemistry.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM424","Special Chemistry Problems ","Allows theoretical and laboratory investigations of a particular problem of interest to the individual student. A written report may be required.","0.5-","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM425","Inorganic Chemistry Laboratory ","Covers synthesis of properties of inorganic compounds, magnetic measurements, spectroscopic properties, and interpretations of complex ion structure. Some or all pre-requisites may be taken as either a pre-requisite or co-requisite. Please see the department for more information.","4.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM430","Analytical Chemistry I ","Provides an introduction to statistics (particularly the development and use of analytic calibration curves), basic electronics, and the principles of spectroscopic methods of analysis, including the interaction of light with matter and basic instrument design.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM431","[WI] Analytical Chemistry II ","Continues CHEM 430. Covers principles of chromatographic methods of analysis. Lab includes experiments on atomic absorption, fluorescence, infrared absorption, UV/visible absorption, gas chromatography, high performance liquid chromatography, basic electronics, and potentiometry/coulometry. This is a writing intensive course.","4.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM465","Synthetic Polymer Chemistry ","Explores scope of polymer science; structure-property relations; step, free radical, cationic, group-transfer, metathesis, coordination, and ring-opening polymerizations; and stereochemistry of polymerizations and reactions of polymers.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM466","Physical Chemistry of Polymers ","Covers kinetics and thermodynamics of polymerizations; control of polymerization processes; gelation theory; copolymerization; and determination of polymer molecular weight and distribution by membrane osmometry, light-scattering, solution viscosity, and other techniques.","3.0 ","AS");
+
+INSERT INTO course(class, title, description, credit, college) VALUES("CHEM467","Polymer Chemistry III ","Covers spectroscopy of polymers; rubber elasticity; morphology; viscoelasticity; thermal analysis; computational methods; testing, fabrication, and processing; and magnetic and mechanical properties of polymers.","3.0 ","AS");

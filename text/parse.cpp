@@ -15,7 +15,7 @@ void print(vector <T> v){
 
 //----- READING IN THE FILE --------
 int main(){
-  ifstream is("CS.txt");
+  ifstream is("input.txt");
   vector <string> v;
   string line;
   while(!is.eof()){
@@ -76,11 +76,11 @@ int main(){
       i++;
     }
 
-  ofstream os("output.txt");
+  ofstream os("COM.txt");
   string x = "\",\"";
   for (unsigned int a = 0; a < idVec.size(); a++){
     os << "INSERT INTO course(class, title, description, credit, college) VALUES(\"";
-    os << idVec[a] << x << titleVec[a] << x << description[a] << x << creditVec[a] << x << "CI";
+    os << idVec[a] << x << titleVec[a] << x << description[a] << x << creditVec[a] << x << "AS";
     os << "\");" << endl;
     os << endl;
   }
