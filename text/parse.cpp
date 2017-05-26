@@ -76,11 +76,11 @@ int main(){
       i++;
     }
 
-  ofstream os("COM.txt");
+  ofstream os("CI.txt");
   string x = "\",\"";
   for (unsigned int a = 0; a < idVec.size(); a++){
     os << "INSERT INTO course(class, title, description, credit, college) VALUES(\"";
-    os << idVec[a] << x << titleVec[a] << x << description[a] << x << creditVec[a] << x << "AS";
+    os << idVec[a] << x << titleVec[a] << x << description[a] << x << creditVec[a] << x << "CI";
     os << "\");" << endl;
     os << endl;
   }
