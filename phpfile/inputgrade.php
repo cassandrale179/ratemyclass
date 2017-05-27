@@ -6,11 +6,6 @@
 	}
 	else {
 	    $username= $_SESSION['username'];
-      $result = mysqli_query($conn, "select * from users where username = '$username'") or die("Failure to query database" .mysqli_error($conn));
-      $row = mysqli_fetch_array($result);
-      $str = $row['userclass'];
-      $classes = explode(",", $str);
-      $enter = 0;
 		};
 ?>
 
@@ -18,8 +13,8 @@
 <html>
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="../css/inputgradestyle.css" type="text/css">
 </head>
 
@@ -50,19 +45,19 @@
       <div class="table-responsive">
         <table id="dynamic_field">
             <tr>
-              <th>Class</th>
-              <th>Grade</th>
-              <th>Year</th>
+              <th>CLASS</th>
+              <th>GRADE</th>
+              <th>YEAR</th>
             </tr>
             <tr>
-              <td><input type="text" name="name[]" placeholder="CS171" list="classes" /></td>
+              <td><input type="text" class="form-input" name="name[]" placeholder="CS171" list="classes" /></td>
               <datalist id="classes"></datalist>
-              <td><input type="text" name="letter[]" placeholder = "A+" /></td>
-              <td><input type="text" name="year[]" placeholder="2014" /></td>
-              <td><button type="button" name="add" id="add">Add More</button></td>
+              <td><input class="form-input" type="text" name="letter[]" placeholder = "A+" /></td>
+              <td><input type="text"class="form-input" name="year[]" placeholder="2014" /></td>
+              <td><button type="button" name="add" id="add">+</button></td>
             </tr>
         </table>
-        <input type="button" name="submit" id="submit" class="btn btn-info" value="Submit" />
+        <input type="button" name="submit" id="submit" value="SUBMIT" />
       </div>
     </form>
   </div>
@@ -74,7 +69,7 @@
       var i=1;
       $('#add').click(function(){
            i++;
-           $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="name[]" list="classes" /></td>  <datalist id="classes"></datalist><td><input type="text" name="letter[]" placeholder = "A+" /></td><td><input type="text" name="year[]"</td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+           $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" class="form-input" name="name[]" list="classes" /></td>  <datalist id="classes"></datalist><td><input type="text" class="form-input" name="letter[]" /></td><td><input type="text" class="form-input" name="year[]"</td><td><button type="button" name="remove" id="'+i+'" class=" btn_remove btnremove">-</button></td></tr>');
       });
       $(document).on('click', '.btn_remove', function(){
            var button_id = $(this).attr("id");
