@@ -19,12 +19,12 @@
       {
         //CAPTURE STUFF FROM FORM AND CHECK IF CLASS ALREADY EXIST
         $name = $_POST["name"][$i];
-        /*for ($i = 0; $i < sizeof($classes); $i++){
-          if ($classes[$i] == $name){
+        for ($j = 0; $j < sizeof($classes); $j++){
+          if ($classes[$j] == $name){
             $enter = 1;
             echo "You already enter grade for this class";
           }
-        }*/
+        }
 
         $letter = $_POST["letter"][$i];
         $year = $_POST["year"][$i];
@@ -43,6 +43,7 @@
         if ($letter == "F")  $letter = 0;
 
         //INSERT STUFF TO FORM
+        if ($enter == 0){
           $str .= $name .",";
           $sql = "INSERT INTO score2(class, grade, year)". "VALUES('$name', '$letter', '$year')";
           $update = "UPDATE course SET sum = sum + '$letter', count = count + 1 WHERE class = '$name'";
@@ -50,6 +51,7 @@
           mysqli_query($conn, $sql);
           mysqli_query($conn, $update);
           mysqli_query($conn, $check);
+        }
       }
     }
       echo "Data submitted";
