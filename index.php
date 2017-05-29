@@ -188,8 +188,7 @@ if (isset($_SESSION['logged_in'])){
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h3>Contact RateMyClass</h2>
-                <p>Feel free to email us to if you have any questions or suggestions.
-                <!--<br> Find a bug in the source code? You can notify us or contribute <a href="https://github.com/cassandrale179/ratemyclass/blob/master/CONTRIBUTING.md">here :) </a></p>-->
+                <p>Feel free to email us to if you have any questions or suggestions. </p>
 
 
                 <p> Contact: <a href="mailto:mnl98x@gmail.com">mnl98x@gmail.com</a>
@@ -197,7 +196,7 @@ if (isset($_SESSION['logged_in'])){
 
                 <ul class="list-inline banner-social-buttons">
                     <li>
-                        <a href="#" class="btn btn-default btn-lg"> <span class="network-name">FAQ</span></a>
+                        <a href="#" class="btn btn-default btn-lg"> <span class="network-name">Terms </span></a>
                     </li>
                     <li>
                         <a href="terms/privacy.html" class="btn btn-default btn-lg"> <span class="network-name">Privacy Policy</span></a>

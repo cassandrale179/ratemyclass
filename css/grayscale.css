@@ -127,7 +127,7 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   color: #424949;
-  background: url(http://hdqwalls.com/wallpapers/minimalist-mountains-black-and-white-ap.jpg);
+  background: url(../images/abstract.png);
   background-position: center;
   background-size: 2500px;
   background-color: black;
@@ -226,7 +226,7 @@ a:focus {
   width: 100%;
   padding: 150px 0;
   color: #424949;
-  background: url(http://hdqwalls.com/wallpapers/minimalist-mountains-black-and-white-ap.jpg);
+  background: url(../images/abstract.png);
   background-color: black;
   background-position: center center;
 }

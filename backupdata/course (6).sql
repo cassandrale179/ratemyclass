@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `course` (
   `credit` double(5,2) NOT NULL,
   `college` varchar(100) NOT NULL,
   `sum` double(5,2) NOT NULL,
-  `count` int(11) DEFAULT NULL,
+  `count` int(11) NOT NULL,
   PRIMARY KEY (`class`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
