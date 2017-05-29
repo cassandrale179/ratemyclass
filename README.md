@@ -1,5 +1,4 @@
-# RateMyClass
-Website: www.ratemyclass.org
+# RateMyClass (www.ratemyclass.org)
 RateMyClass is an open source project created at Drexel University that allow students to view score distribution and difficulty of a class through data crowdsourced by Drexel students. It is written in PHP to allow users to create account, and uses SQL database to compute class average, score distribution, sample size and class's difficulty level (easy, medium, hard). The webapp also utilizes JavaScript sorting algorithm to sort classes from easiest to hardest for each major, and displays it to the client side using chartJS framework. All functionalities are automated by making AJAX call to the server and commit new changes through JSON file, allowing data update within 1 second.   
 
 ## How To Use
