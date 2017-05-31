@@ -17,8 +17,16 @@
 			$rowSQL = mysqli_query($conn, "SELECT MAX( ID ) AS max FROM `score2`;" );
 			$row2 = mysqli_fetch_array( $rowSQL );
 			$largestNumber = $row2['max'];
-			echo "$largestNumber";
+			$result2 = mysqli_query($conn, "select * from score2 where id = '$largestNumber'") or die("Failure to query database". mysqli_error($conn));
 
+			$row2 = mysqli_fetch_array($result2);
+			$latestClass = $row2['class'];
+
+			//Other classes
+			$result3 = mysqli_query($conn, "select * from score2 where id = '$largestNumber'-1");
+			$latestClass2 = mysqli_fetch_array($result3)['class'];
+			$result4 = mysqli_query($conn, "select * from score2 where id = '$largestNumber'-2");
+			$latestClass3 = mysqli_fetch_array($result4)['class'];
 
 		};
 	?>
@@ -99,6 +107,11 @@
 	<div id="D">
 		<h1> RECENTLY UPDATED CLASSES </h1>
 		To see classes that have data, click <a href="../terms/available.php"> HERE.</a>
+		<?php
+			echo "<li>Someone just added grade for <b>$latestClass</b></li>";
+			echo "<li>Someone just added grade for <b>$latestClass2</b></li>";
+			echo "<li>Someone just added grade for <b>$latestClass3</b></li>";
+		 ?>
 	</div>
 <script type="text/javascript" src="dashboardjs.js"></script>
 </body>
