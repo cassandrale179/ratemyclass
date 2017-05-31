@@ -15,9 +15,9 @@
 		{
 
 			//Capture the password
-			$password = base64_encode($_POST['current']);
-			$newpass = base64_encode($_POST['new']);
-			$newpass2 = base64_encode($_POST['new2']);
+			$password = $_POST['current'];
+			$newpass = $_POST['new'];
+			$newpass2 = $_POST['new2'];
 
 			//Query the database for table user
 			$result = mysqli_query($conn, "select * from users where username = '$username' and password='$password'") or die("Failure to query database" .mysqli_error($conn));
@@ -110,4 +110,9 @@
 		</div>
 		</form>
 	</div>
+</div>
+
+<div id="C">
+	<h1> CONTACT</h1>
+	<h3> Do not see a class in our database? Have an issue? Reach us here. </h3>
 </div>

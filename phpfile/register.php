@@ -9,35 +9,40 @@
 		{
 			$username = $_POST['username'];
 			$email = $_POST['email'];
-			$password = base64_encode($_POST['password']);
+			$password = $_POST['password'];
 
-			//-----IF IT'S NOT DREXEL EMAIL -----
-			$myArray = explode('@', $email);
-			if ($myArray[1] != "drexel.edu"){
-				echo "<script>alert('Please enter your Drexel email address')</script>";
+
+			//------ CHECK IF THE USERNAME ALREADY EXIST
+			$result = mysqli_query($conn, "select * from users where username = '$username'");
+			$row = mysqli_fetch_array($result);
+			if ($row['username'] == $username){
+				echo "<script>alert('This username already exist. Please choose something else')</script>";
 			}
-
-			//-----IF IT IS A DREXEL EMAIL ------
-			else
-			{
-				//------ SEND AN EMAIL VERIFICATION ------
-				$randnum = rand(1000,10000);
-				$to = $email;
-				$subject = "Confirm your email | RateMyClass";
-				$message = "Thank you for signing up! Your verification code is $randnum ";
-				$headers = 'From:noreply@ratemyclass.org' . "\r\n";
-				mail($to, $subject, $message, $headers);
-
-
-				$sql = "INSERT INTO users(username, email, password, randnum)". "VALUES ('$username', '$email', '$password', '$randnum')";
-
-
-				if ($conn->query($sql)===true)
-				{
-					header("location: initclass.php");
-					$_SESSION['username'] = $username;
-					$_SESSION['logged_in'] = 1;
+			else{
+				//-----IF IT'S NOT DREXEL EMAIL -----
+				$myArray = explode('@', $email);
+				if ($myArray[1] != "drexel.edu"){
+					echo "<script>alert('Please enter your Drexel email address')</script>";
 				}
+				else{
+					$randnum = rand(1000,10000);
+					/*$to = $email;
+					$subject = "Confirm your email | RateMyClass";
+					$message = "Thank you for signing up! Your verification code is $randnum ";
+					$headers = 'From:noreply@ratemyclass.org' . "\r\n";
+					mail($to, $subject, $message, $headers);*/
+
+
+					$sql = "INSERT INTO users(username, email, password, randnum)". "VALUES ('$username', '$email', '$password', '$randnum')";
+					if ($conn->query($sql)===true)
+					{
+						header("location: initclass.php");
+						$_SESSION['username'] = $username;
+						$_SESSION['logged_in'] = 1;
+					}
+
+				}
+
 			}
 		}
 

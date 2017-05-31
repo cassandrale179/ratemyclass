@@ -66,6 +66,10 @@
 			<a href='logout.php'><button id='Abtn' name='logout'> LOGOUT </button></a>
 		</div>
 	</div>
+	<div id="B1">
+		<h1> Thank you for being our beta user! </h1>
+		<h3> Would you mind answering our <b><a href="https://goo.gl/forms/HXxNC7qG2NWWjN7o1" target="blank">SURVEY </a> </b>to improve the website? Thank you :) </h3>
+	</div>
 
 	<div id='B2'>
 		<canvas id='canvas' width='900' height='400'></canvas>
@@ -80,6 +84,10 @@
 				echo "<li>$classes[$i]</li>";
 			}
 		 ?>
+	</div>
+
+	<div id="D">
+		<h1> RECENTLY ADDED CLASSES </h1>
 	</div>
 <script type="text/javascript" src="dashboardjs.js"></script>
 </body>

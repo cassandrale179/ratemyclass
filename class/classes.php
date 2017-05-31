@@ -50,8 +50,9 @@
         if ($enter == 0){
           $str .= $class .",";
           $sql = "INSERT INTO score2(class, grade, year) VALUES ('$class', '$letter', '$year')";
+          $update = "UPDATE course SET sum = sum + '$letter', count = count + 1 WHERE class = '$class'";
           $check = "UPDATE users SET userclass = '$str' WHERE username = '$username'";
-          if ($conn->query($sql)===true and $conn->query($check)===true){
+          if ($conn->query($sql)===true and $conn->query($check)===true and $conn->query($update) === true){
               header('location: ../class/classes.php');
           }
         }
