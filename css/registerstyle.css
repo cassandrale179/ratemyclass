@@ -204,5 +204,11 @@ footer{
 footer p{
 	color: white;
 	padding-top: 30px;
-	margin-left: 35%;
+	margin-left: 35;
+}
+
+
+#A{
+	font-family: 'PT serif', sans-serif;
+	margin-left: 5%;
 }

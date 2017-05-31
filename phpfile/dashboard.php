@@ -5,11 +5,21 @@
 	  header('location: login.php');
 	}
 	else {
+
+			//DISPLAYING CLASSES USER HAVE INPUT
 	    $username= $_SESSION['username'];
 			$result = mysqli_query($conn, "select * from users where username = '$username'") or die("Failure to query database" .mysqli_error($conn));
 			$row = mysqli_fetch_array($result);
 			$str = $row['userclass'];
 			$classes = explode(",", $str);
+
+			//DISPLAYING RECENTLY UPDATED CLASSES
+			$rowSQL = mysqli_query($conn, "SELECT MAX( ID ) AS max FROM `score2`;" );
+			$row2 = mysqli_fetch_array( $rowSQL );
+			$largestNumber = $row2['max'];
+			echo "$largestNumber";
+
+
 		};
 	?>
 
@@ -87,7 +97,8 @@
 	</div>
 
 	<div id="D">
-		<h1> RECENTLY ADDED CLASSES </h1>
+		<h1> RECENTLY UPDATED CLASSES </h1>
+		To see classes that have data, click <a href="../terms/available.php"> HERE.</a>
 	</div>
 <script type="text/javascript" src="dashboardjs.js"></script>
 </body>

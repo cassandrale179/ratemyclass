@@ -183,7 +183,7 @@ function courseDisplay(){
 		}
 		else{
 			classLabel = "No Data";
-			alert("No data exists for this class yet. Invite more Drexel students to join and build data");
+			alert("No data exists for this class yet. Invite more Drexel students to join and build data! To see classes with data in them, go to Dashboard -> Available Classes");
 		}
 		displayPieChart(a,b,c,d,f,c1,c2,c3,c4,h1,h2,h3,h4);
 
