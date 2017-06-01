@@ -2,13 +2,13 @@
   session_start();
    include "adb.php";
 
-  //CHECK TO SEE IF USER IS LOGGED IN
+  /*CHECK TO SEE IF USER IS LOGGED IN
   if ($_SESSION['logged_in'] != 1 ){
     header('location: login.php');
   }
   else{
     	$username = $_SESSION['username'];
-  }
+  }*/
 
  //FORM SUBMISSION
  if ($_SERVER['REQUEST_METHOD'] == 'POST')
@@ -26,21 +26,44 @@
    $year3 = $_POST['year3'];
 
    //LETTER GRADE CONVERSION FUNCTION
-   if ($letter1 == "A")$letter1 = 4;
-   if ($letter1 == "B")$letter1 = 3;
-   if ($letter1 == "C")$letter1 = 2;
-   if ($letter1 == "D")$letter1 = 1;
-   if ($letter1 == "F")$letter1 = 0;
-   if ($letter2 == "A")$letter2 = 4;
-   if ($letter2 == "B")$letter2 = 3;
-   if ($letter2 == "C")$letter2 = 2;
-   if ($letter2 == "D")$letter2 = 1;
-   if ($letter2 == "F")$letter2 = 0;
-   if ($letter3 == "A")$letter3 = 4;
-   if ($letter3 == "B")$letter3 = 3;
-   if ($letter3 == "C")$letter3 = 2;
-   if ($letter3 == "D")$letter3 = 1;
-   if ($letter3 == "F")$letter3 = 0;
+   if ($letter1 == "A+") $letter1 = 4;
+   if ($letter1 == "A")  $letter1 = 4;
+   if ($letter1 == "A-") $letter1 = 3.67;
+   if ($letter1 == "B+") $letter1 = 3.33;
+   if ($letter1 == "B")  $letter1 = 3;
+   if ($letter1 == "B-") $letter1 = 2.67;
+   if ($letter1 == "C+") $letter1 = 2.33;
+   if ($letter1 == "C")  $letter1 = 2;
+   if ($letter1 == "C-") $letter1 = 1.67;
+   if ($letter1 == "D+") $letter1 = 1.33;
+   if ($letter1 == "D")  $letter1 = 1;
+   if ($letter1 == "F")  $letter1 = 0;
+
+   if ($letter2 == "A+") $letter2 = 4;
+   if ($letter2 == "A")  $letter2 = 4;
+   if ($letter2 == "A-") $letter2 = 3.67;
+   if ($letter2 == "B+") $letter2 = 3.33;
+   if ($letter2 == "B")  $letter2 = 3;
+   if ($letter2 == "B-") $letter2 = 2.67;
+   if ($letter2 == "C+") $letter2 = 2.33;
+   if ($letter2 == "C")  $letter2 = 2;
+   if ($letter2 == "C-") $letter2 = 1.67;
+   if ($letter2 == "D+") $letter2 = 1.33;
+   if ($letter2 == "D")  $letter2 = 1;
+   if ($letter2 == "F")  $letter2 = 0;
+
+   if ($letter3 == "A+") $letter3 = 4;
+   if ($letter3 == "A")  $letter3 = 4;
+   if ($letter3 == "A-") $letter3 = 3.67;
+   if ($letter3 == "B+") $letter3 = 3.33;
+   if ($letter3 == "B")  $letter3 = 3;
+   if ($letter3 == "B-") $letter3 = 2.67;
+   if ($letter3 == "C+") $letter3 = 2.33;
+   if ($letter3 == "C")  $letter3 = 2;
+   if ($letter3 == "C-") $letter3 = 1.67;
+   if ($letter3 == "D+") $letter3 = 1.33;
+   if ($letter3 == "D")  $letter3 = 1;
+   if ($letter3 == "F")  $letter3 = 0;
 
 
    //STORE VARIABLES INTO DATABASE
@@ -118,47 +141,96 @@
       <div class="column">
         <div>
           <label> Class </label>
-          <input class="form-control" type="text" placeholder="CS171" name="class1" list="drexelclass" required />
+          <input class="form-control" type="text" placeholder="CS171" name="class1" list="classes" required />
+          <datalist id="classes"></datalist>
         </div>
       </div>
       <div class="column mid-padding">
         <label> Grade </label>
-        <input type="text" class="form-control" name="letter1" placeholder="E.g: A+" list="grade" required />
+        <input type="text" class="form-control" name="letter1" placeholder="A+" list="grades" required />
+        <datalist id="grades">
+          <option value="A+">
+          <option value="A">
+          <option value="A-">
+          <option value="B+">
+          <option value="B">
+          <option value="B-">
+          <option value="C+">
+          <option value="C">
+          <option value="C-">
+          <option value="D+">
+          <option value="D">
+          <option value="D-">
+          <option value="F">
+        </datalist>
       </div>
       <div class="column">
         <label> Year </label>
         <input type="number" class="form-control" name="year1"
-        placeholder="E.g: 2014">
+        placeholder="2014">
       </div>
 
       <!-- _______________________________________SECOND ROW___________________________________________ -->
       <div class="column">
         <div>
-          <input class="form-control" type="text" placeholder="CS171" name="class2" list="drexelclass" required />
+          <input class="form-control" type="text" placeholder="CS171" name="class2" list="classes" required />
+          <datalist id="classes"></datalist>
         </div>
       </div>
       <div class="column mid-padding">
-        <input type="text" class="form-control" name="letter2" placeholder="E.g: A+" list="grade" required />
+        <input type="text" class="form-control" name="letter2" placeholder="A+" list="grades" required />
+        <datalist id="grades">
+          <option value="A+">
+          <option value="A">
+          <option value="A-">
+          <option value="B+">
+          <option value="B">
+          <option value="B-">
+          <option value="C+">
+          <option value="C">
+          <option value="C-">
+          <option value="D+">
+          <option value="D">
+          <option value="D-">
+          <option value="F">
+        </datalist>
       </div>
       <div class="column">
         <input type="number" class="form-control" name="year2"
-        placeholder="E.g: 2014">
+        placeholder="2014">
       </div>
 
 
       <!-- _______________________________________THIRD ROW___________________________________________ -->
       <div class="column">
         <div>
-          <input class="form-control" type="text" placeholder="CS171" name="class3" list="drexelclass" required />
+          <input class="form-control" type="text" placeholder="CS171" name="class3" list="classes" required />
+          <datalist id="classes"></datalist>
         </div>
       </div>
       <div class="column mid-padding">
-        <input type="text" class="form-control" name="letter3" placeholder="E.g: A+" list="grade" required />
+        <input type="text" class="form-control" name="letter3" placeholder="A+" list="grades" required />
+        <datalist id="grades">
+          <option value="A+">
+          <option value="A">
+          <option value="A-">
+          <option value="B+">
+          <option value="B">
+          <option value="B-">
+          <option value="C+">
+          <option value="C">
+          <option value="C-">
+          <option value="D+">
+          <option value="D">
+          <option value="D-">
+          <option value="F">
+        </datalist>
       </div>
       <div class="column">
         <input type="number" class="form-control" name="year3"
-        placeholder="E.g: 2014">
+        placeholder="2014">
       </div>
       <input type="submit" value="Submit" name="next" class="reg-btn inline" />
   </div>
 </div>
+ <script src="datalist.js"></script>

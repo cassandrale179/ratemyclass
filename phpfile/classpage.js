@@ -59,8 +59,18 @@ function courseDisplay(){
 		for (var i = 0; i < courseData.length; i++){
 			if(courseData[i].class == permClass){
 				var title = courseData[i].title.toUpperCase();
-				var credit = "<br><b> Credit: </b>" + courseData[i].credit;
+				var credit = "<br><b> Credit: </b>" + courseData[i].credit + "<br>";
 			 	var description = courseData[i].description;
+				var college = courseData[i].college;
+
+				//OUTPUT CORRECT DEPARTMENT INFORMATION
+				if (college == "A") college = "<b>Department: </b>" + "Antoinette Westphal College of Media Arts & Design";
+				if (college == "AS") college = "<b>Department: </b>" + "College of Arts and Sciences";
+				if (college == "B") college = "<b>Department: </b>" + "LeBow College of Business";
+				if (college == "CI") college ="<b>Department: </b>" + "College of Computing and Informatics";
+				if (college == "E") college = "<b>Department: </b>" + "College of Engineering";
+				if (college == "NH") college = "<b>Department: </b>" + "College of Nursing & Health Professions";
+				if (college == "T") college = "<b>Department: </b>" + "School of Education";
 			}
 		}
 
@@ -69,6 +79,7 @@ function courseDisplay(){
 		titleDisplay.insertAdjacentHTML('beforeend', title);
 		descriptionDisplay.insertAdjacentHTML('beforeend', description);
 		descriptionDisplay.insertAdjacentHTML('beforeend', credit);
+		descriptionDisplay.insertAdjacentHTML('beforeend', college);
 
 		//STORE LOCAL SESSION VALUE
 		var input = "<input name='class' type='hidden' value='" + permClass + "' />";

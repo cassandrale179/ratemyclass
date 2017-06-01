@@ -211,5 +211,10 @@ button{
   font-family: 'Roboto Condensed', sans-serif;
   width: 400px;
   height: 400px;
-  text-align: center; 
+  text-align: center;
+}
+
+
+#C a{
+  color: rgb(75,192,192);
 }

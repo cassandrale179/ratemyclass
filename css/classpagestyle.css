@@ -300,6 +300,14 @@ p{
   text-align: left;
 }
 
+#dialog a{
+  font-size: 18px;
+  outline: none;
+  text-decoration: none;
+  color: #117864;
+
+}
+
 .ui-dialog-title{
   font-family: 'Roboto Condensed', sans-serif;
 
@@ -310,13 +318,6 @@ p{
     padding: 0 !important;
 }
 
-#dialog a{
-  font-size: 18px;
-  outline: none;
-  text-decoration: none;
-  color: #117864;
-
-}
 
 
 /* ----------- This secion dowward is for sorting page -----------  */

@@ -114,5 +114,5 @@
 
 <div id="C">
 	<h1> CONTACT</h1>
-	<h3> Do not see a class in our database? Have an issue? Reach us here. </h3>
+	<h3> Do not see a class in our database? Have an issue? Reach us <a href="https://goo.gl/forms/6LMoJ9Og6DAnpCiN2"> <b>HERE.</a></b></h3>
 </div>
