@@ -25,7 +25,7 @@
         $to = $email;
         $subject = "Your Password & Username | RateMyClass";
         $message = "Your username is $username and your password is $password";
-        $headers = 'From:noreply@ratemyclass.org' . "\r\n";
+        $headers = 'From:no-reply@ratemyclass.org' . "\r\n";
         mail($to, $subject, $message, $headers);
       }
   }

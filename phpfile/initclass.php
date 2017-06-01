@@ -2,13 +2,13 @@
   session_start();
    include "adb.php";
 
-  /*CHECK TO SEE IF USER IS LOGGED IN
+  //CHECK TO SEE IF USER IS LOGGED IN
   if ($_SESSION['logged_in'] != 1 ){
     header('location: login.php');
   }
   else{
     	$username = $_SESSION['username'];
-  }*/
+  }
 
  //FORM SUBMISSION
  if ($_SERVER['REQUEST_METHOD'] == 'POST')

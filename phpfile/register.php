@@ -2,37 +2,49 @@
 	session_start();
 	include "adb.php";
 
-	if ($_SERVER['REQUEST_METHOD'] == 'POST')
+if ($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+
+	//---- CHECK IF IT IS A DREXEL EMAIL----
+	$email = $_POST['email'];
+	$myArray = explode('@', $email);
+	if ($myArray[1] != "drexel.edu"){
+			echo "<script>alert('Please enter your Drexel email address')</script>";
+	}
+
+	//---- CHECK IF EMAIL ALREADY EXIST IN DATABASE -----
+	else
 	{
-		//-----IF PASSWORD MATCH-----
-		if ($_POST['password'] == $_POST['confirmpassword'])
+		$emailCheck = mysqli_query($conn, "select * from users where email = '$email'");
+		$emailRow = mysqli_fetch_array($emailCheck);
+		if ($emailRow['email'] == $email)
 		{
-			$username = $_POST['username'];
-			$email = $_POST['email'];
-			$password = $_POST['password'];
+			echo "<script>alert ('An account is already registered with this email. If you forget your password or username, click on Login and choose Forgot Password. If you have not registered with this email before, let us know immediately.')</script>";
+		}
 
-
-			//------ CHECK IF THE USERNAME ALREADY EXIST
-			$result = mysqli_query($conn, "select * from users where username = '$username'");
-			$row = mysqli_fetch_array($result);
-			if ($row['username'] == $username){
+		//---- CHECK IF PASSWORD MATCH-------
+		else
+		{
+			if ($_POST['password'] == $_POST['confirmpassword'])
+			{
+				//----- CHECK IF USERNAME ALREADY EXIST-------
+				$username = $_POST['username'];
+				$password = base64_encode($_POST['password']);
+				$result = mysqli_query($conn, "select * from users where username = '$username'");
+				$row = mysqli_fetch_array($result);
+				if ($row['username'] == $username){
 				echo "<script>alert('This username already exist. Please choose something else')</script>";
-			}
-			else{
-				//-----IF IT'S NOT DREXEL EMAIL -----
-				$myArray = explode('@', $email);
-				if ($myArray[1] != "drexel.edu"){
-					echo "<script>alert('Please enter your Drexel email address')</script>";
 				}
-				else{
+				else
+				{
 					$randnum = rand(1000,10000);
-					/*$to = $email;
+					$to = $email;
 					$subject = "Confirm your email | RateMyClass";
 					$message = "Thank you for signing up! Your verification code is $randnum ";
-					$headers = 'From:noreply@ratemyclass.org' . "\r\n";
-					mail($to, $subject, $message, $headers);*/
+					$headers = 'From:no-reply@ratemyclass.org' . "\r\n";
+					mail($to, $subject, $message, $headers);
 
-
+					//----- INSERT STUFF AND UPDATE THE DATABASE-------
 					$sql = "INSERT INTO users(username, email, password, randnum)". "VALUES ('$username', '$email', '$password', '$randnum')";
 					if ($conn->query($sql)===true)
 					{
@@ -40,19 +52,15 @@
 						$_SESSION['username'] = $username;
 						$_SESSION['logged_in'] = 1;
 					}
-
 				}
-
+			}
+			else{
+				echo "<script>alert('Two passwords do not match'); </script>";
 			}
 		}
-
-		//-----IF PASSWORD DO NOT MATCH-----
-		else{
-			echo "<script>alert('Two passwords do not match'); </script>";
-		}
 	}
+}
 ?>
-
 
 
 <!-- __________________________________________ HTML PART _______________ ____________________  -->
