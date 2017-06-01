@@ -17,16 +17,22 @@
 			$rowSQL = mysqli_query($conn, "SELECT MAX( ID ) AS max FROM `score2`;" );
 			$row2 = mysqli_fetch_array( $rowSQL );
 			$largestNumber = $row2['max'];
-			$result2 = mysqli_query($conn, "select * from score2 where id = '$largestNumber'") or die("Failure to query database". mysqli_error($conn));
 
-			$row2 = mysqli_fetch_array($result2);
-			$latestClass = $row2['class'];
-
-			//Other classes
-			$result3 = mysqli_query($conn, "select * from score2 where id = '$largestNumber'-1");
-			$latestClass2 = mysqli_fetch_array($result3)['class'];
-			$result4 = mysqli_query($conn, "select * from score2 where id = '$largestNumber'-2");
-			$latestClass3 = mysqli_fetch_array($result4)['class'];
+			//I KNOW THIS CODE IS VERY INEFFICIENT BUT I AM DOING THIS AT 1 AM IN THE MORNING WITHOUT SLEEP AND I HAVE A DEMO TOMORROW
+			$u1 = mysqli_query($conn, "select * from score2 where id = '$largestNumber'") or die("Failure to query database". mysqli_error($conn));
+			$c1 = mysqli_fetch_array($u1)['class'];
+			$u2 = mysqli_query($conn, "select * from score2 where id = '$largestNumber'-1");
+			$c2 = mysqli_fetch_array($u2)['class'];
+			$u3 = mysqli_query($conn, "select * from score2 where id = '$largestNumber'-2");
+			$c3 = mysqli_fetch_array($u3)['class'];
+			$u4 = mysqli_query($conn, "select * from score2 where id = '$largestNumber'-3");
+			$c4 = mysqli_fetch_array($u4)['class'];
+			$u5 = mysqli_query($conn, "select * from score2 where id = '$largestNumber'-4");
+			$c5 = mysqli_fetch_array($u5)['class'];
+			$u6 = mysqli_query($conn, "select * from score2 where id = '$largestNumber'-5");
+			$c6 = mysqli_fetch_array($u6)['class'];
+			$u7 = mysqli_query($conn, "select * from score2 where id = '$largestNumber'-6");
+			$c7 = mysqli_fetch_array($u7)['class'];
 
 		};
 	?>
@@ -96,21 +102,25 @@
 	<!-- ___________________________ LIST OF CLASSES_______________________________________ -->
 	<div id="C">
 		<h1> CLASSES YOU SUBMITTED </h1>
-		A list of classes you have already entered will appear here:
+		To add more classes, click <a href="inputgrade.php"> HERE </a> and help build the data :)
 		<?php
 			for ($i = 0; $i < sizeof($classes)-1; $i++){
-				echo "<li>$classes[$i]</li>";
+				echo "<li> You entered grade for <b>$classes[$i]</b></li>";
 			}
 		 ?>
 	</div>
 
 	<div id="D">
 		<h1> RECENTLY UPDATED CLASSES </h1>
-		To see classes that have data, click <a href="../terms/available.php"> HERE.</a>
+		To see all classes that contain grade, click <a href="../terms/available.php"> HERE.</a>
 		<?php
-			echo "<li>Someone just added grade for <b>$latestClass</b></li>";
-			echo "<li>Someone just added grade for <b>$latestClass2</b></li>";
-			echo "<li>Someone just added grade for <b>$latestClass3</b></li>";
+			echo "<li>Someone just added grade for <b>$c1</b></li>";
+			echo "<li>Someone just added grade for <b>$c2</b></li>";
+			echo "<li>Someone just added grade for <b>$c3</b></li>";
+			echo "<li>Someone just added grade for <b>$c4</b></li>";
+			echo "<li>Someone just added grade for <b>$c5</b></li>";
+			echo "<li>Someone just added grade for <b>$c6</b></li>";
+			echo "<li>Someone just added grade for <b>$c7</b></li>";
 		 ?>
 	</div>
 <script type="text/javascript" src="dashboardjs.js"></script>

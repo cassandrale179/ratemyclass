@@ -44,9 +44,19 @@ function calculateChart(){
 				Acount = Acount + parseFloat(data[i].count);
 			}
 		}
-		var CI = Math.round(CIsum / CIcount*100)/100;
-		displayChart(ASsum / AScount, CI, Esum/Ecount, Bsum/Bcount, Tsum/Tcount, Hsum/Hcount, Asum/Acount);
+
+		//ROUNDING UP THE NUMBERS
+		var AS = Math.round(ASsum / AScount*100) /100;
+		var CI = Math.round(CIsum / CIcount*100) /100;
+		var E  = Math.round(Esum / Ecount*100) /100;
+		var B  = Math.round(Bsum / Bcount*100) /100;
+		var T  = Math.round(Tsum / Tcount*100) /100;
+		var H  = Math.round(Hsum / Hcount*100) /100;
+		var A = Math.round(Asum / Acount*100) /100;
+
+		displayChart(AS, CI, E, B, T, H, A);
 	}
+
 	request.send();
 }
 
