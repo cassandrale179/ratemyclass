@@ -93,6 +93,13 @@
 
 	<!-- Font style of Robot Condensed for ChartJs -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
+
+  <!-- Some jQuery stuff for the dialogue box -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 </head>
 
 <body>
@@ -169,5 +176,10 @@
   <h3> Reviews </h3>
   <h5> Reviews for a class will be posted down here.</h5>
 </div>
+
 <br /><br />
 <script type="text/javascript" src="../phpfile/classpage.js"></script>
+
+<div id="dialog" title="NO DATA EXIST">
+  <p> No data exist for this class yet :( To see a list of classes with data, click <a href="../terms/available.php"><b>HERE.</b></a> Else, invite more Drexel students to join and grow data! </p>
+</div>

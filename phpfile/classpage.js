@@ -64,13 +64,13 @@ function courseDisplay(){
 			}
 		}
 
-		//Display thing based on value of permanent value
+		//DISPLAY THINGS BASED ON PERMANENT VALUE
 		header.insertAdjacentHTML('beforeend', permClass);
 		titleDisplay.insertAdjacentHTML('beforeend', title);
 		descriptionDisplay.insertAdjacentHTML('beforeend', description);
 		descriptionDisplay.insertAdjacentHTML('beforeend', credit);
 
-		//Store local session values
+		//STORE LOCAL SESSION VALUE
 		var input = "<input name='class' type='hidden' value='" + permClass + "' />";
 		wrapper.insertAdjacentHTML('beforeend', input);
 		classplace.insertAdjacentHTML('beforeend', input);
@@ -83,13 +83,13 @@ function courseDisplay(){
  //--------------  FUNCTION TO DISPLAY CLASS CHART  -----------------------
  function calculateClassAvg(){
 
-	 //Get id of stuff
+	 //GET ID OF STUFF
 	 var jsondisplay = document.getElementById("jsondisplay");
 	 var reviewbtn = document.getElementById("review");
 	 var header = document.getElementById("header");
 	 var permClass = localStorage.getItem("val");
 
-	 //Pulling JSON data from internal file
+	 //PULLING JSON FROM INTERNAL FILE
 	 var request = new XMLHttpRequest();
 	 request.open('GET', 'file.php', true);
 	 request.onload = function()
@@ -104,7 +104,7 @@ function courseDisplay(){
 			}
 		}
 
-		//Store class grade to pie chart
+		//CREATE ARRAYS TO STORE GRADE DISTRIBUTION
 		var a = 0;
 		var b = 0;
 		var c = 0;
@@ -119,11 +119,11 @@ function courseDisplay(){
 		}
 
 
-		//Calculating class average and display it
+		//CALCULATE CLASS AVERAGE AND PASSING RATE
 		classavg = Math.round(classavg / count * 100) / 100;
 		var passingrate = Math.round((a + b + c) / count * 100);
 
-		//Calculating class letter grade
+		//CALCULATE PERCENTAGE OF GRADE DISTRIBUTION
 		var lettergrade;
 		var letterarr = [a,b,c,d,f];
 		var max = Math.max(a,b,c,d,f);
@@ -134,10 +134,11 @@ function courseDisplay(){
 		if (max == f) lettergrade = "F";
 
 
-
-		//Assign class label and change accent color
+		//VARIABLES FOR CLASS LABEL AND COLOR ACCENT
 		var classLabel;
 		var c1,c2,c3,c4,h1,h2,h3,h4;
+
+		//IF CLASS IS EASY
 		if (classavg > 3.30){
 			classLabel = "Easy";
 			jsondisplay.style.color = "#117864";
@@ -151,8 +152,11 @@ function courseDisplay(){
 			h4 = "#A3E4D7";
 			reviewbtn.style.background = "#48C9B0";
 			changeHover(c1,c2);
+			$('#dialog').hide();
 
 		}
+
+		//IF CLASS IS MEDIUM
 		else if (classavg > 2.60){
 			classLabel = "Medium";
 			jsondisplay.style.color = "#B7950B";
@@ -166,7 +170,10 @@ function courseDisplay(){
 			h4 = "##F9E79F";
 			reviewbtn.style.background = "#D4AC0D";
 			changeHover(c1,c2);
+			$('#dialog').hide();
 		}
+
+		//IF CLASS IS DIFFICULT
 		else if (classavg > 0){
 			classLabel = "Hard";
 			jsondisplay.style.color = "#922B21";
@@ -180,14 +187,21 @@ function courseDisplay(){
 			h4 = "#F1948A";
 			reviewbtn.style.background = "#C0392B";
 			changeHover(c1,c2);
+			$('#dialog').hide();
 		}
+
+		//IF NO DATA FOR A CLASS EXIST, CALL CUSTOMIZED DIALOG BOX
 		else{
 			classLabel = "No Data";
-			alert("No data exists for this class yet. Invite more Drexel students to join and build data! To see classes with data in them, go to Dashboard -> Available Classes");
+			$( function() {
+				$( "#dialog" ).dialog();
+			} );
 		}
+
+		//DISPLAY THE CHART
 		displayPieChart(a,b,c,d,f,c1,c2,c3,c4,h1,h2,h3,h4);
 
-		//display Text
+		//DISPLAY TEXT ON THE CHART
 		var averageText = "<h4>" + "Average: " + "<b>" + classavg + "/4.00 </b><br>Most students receive <b>" + lettergrade + "</b><br>Passing rate: <b>" + passingrate +
 		"%</b> <br> Sample Size: <b>" + count + " users</b></h4>";
 		jsondisplay.insertAdjacentHTML('beforeend', classLabel);
