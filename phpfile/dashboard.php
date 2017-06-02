@@ -12,7 +12,10 @@
 			$row = mysqli_fetch_array($result);
 			$str = $row['userclass'];
 			$classes = explode(",", $str);
-
+			if (sizeof($classes) < 3){
+				header('location: initclass.php');
+			}
+rat
 			//DISPLAYING RECENTLY UPDATED CLASSES
 			$rowSQL = mysqli_query($conn, "SELECT MAX( ID ) AS max FROM `score2`;" );
 			$row2 = mysqli_fetch_array( $rowSQL );
