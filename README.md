@@ -5,9 +5,9 @@ RateMyClass is an open source project created at Drexel University that allow st
 ### 1. Register an account.
 Account must be registered with a Drexel University's email address. This is for verification purpose so that grade are only inputted from Drexel students, and not from outsiders. Attempt to register with a non-Drexel University email will result in failure.
 ### 2. Create an anonymous username and password.
-A 4-digit PIN code will be generated and send to your Drexel's email address. Put that 4 digit code in the verification page. From now on, you can log in with your username and password. If you forgot your credentials, click "Forgot My Password" and an email will be send to your Drexel University's email address containing your username and password.
+If you forgot your credentials, click "Forgot My Password" and an email will be send to your Drexel University's email address containing your username and password.
 ### 3. Input at least 3 grades
-Input at least 3 grades (e.g A, B, B+) for 3 classes of which you have taken (e.g CS171, CS172, CS164). After you have done so, you will be redirected to a dashboard.
+You will be redirected to the dashboard. To use the search function, input at least 3 grades (e.g A, B, B+) for 3 classes of which you have taken (e.g CS171, CS172, CS164).
 ### 4. Functionalities:
   - <b> Dashboard </b> is where you can see the grade distribution across all colleges within the University (e.g College of Arts and Science, College of Computing and Informatics...etc.)
   - <b> Search bar </b> is where you can find a class's name. Click on the datalist option to redirect to the class's page. You will be able to see how many people have taken this class, how many receive A, B, C...etc., as well as class score. If you cannot find a class's name when search, let us know through the contact form on the Settings page. Certain classes such as Independent Study or Special Topics are not yet entered into our database. At the moment, Ratemyclass only contained classes with high volume of students.
