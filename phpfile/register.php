@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 					$sql = "INSERT INTO users(username, email, password, randnum)". "VALUES ('$username', '$email', '$password', '$randnum')";
 					if ($conn->query($sql)===true)
 					{
-						header("location: initclass.php");
+						header("location: dashboard.php");
 						$_SESSION['username'] = $username;
 						$_SESSION['logged_in'] = 1;
 					}

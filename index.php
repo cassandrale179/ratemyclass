@@ -190,13 +190,9 @@ if (isset($_SESSION['logged_in'])){
                 <h3>Contact RateMyClass</h2>
                 <p>Feel free to email us to if you have any questions or suggestions. </p>
 
-
-                <p> Contact: <a href="mailto:mnl98x@gmail.com">mnl98x@gmail.com</a>
-                </p>
-
                 <ul class="list-inline banner-social-buttons">
                     <li>
-                        <a href="#" class="btn btn-default btn-lg"> <span class="network-name">Terms </span></a>
+                        <a href="https://goo.gl/forms/6LMoJ9Og6DAnpCiN2" class="btn btn-default btn-lg"> <span class="network-name">Contact </span></a>
                     </li>
                     <li>
                         <a href="terms/privacy.html" class="btn btn-default btn-lg"> <span class="network-name">Privacy Policy</span></a>

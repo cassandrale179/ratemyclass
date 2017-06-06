@@ -1,4 +1,5 @@
 <?php
+include "adb.php";
 session_start();
 if ( $_SESSION['logged_in'] != 1 ) {
 	$_SESSION['message'] = 'You must log in before viewing your profile page!';
@@ -9,6 +10,16 @@ else {
 		// Makes it easier to read
 		$username= $_SESSION['username'];
 		$_SESSION['logged_in'] = 1;
+
+		//DISPLAYING CLASSES USER HAVE INPUT
+		$username= $_SESSION['username'];
+		$result = mysqli_query($conn, "select * from users where username = '$username'") or die("Failure to query database" .mysqli_error($conn));
+		$row = mysqli_fetch_array($result);
+		$str = $row['userclass'];
+		$classes = explode(",", $str);
+		if (sizeof($classes) < 3){
+			header('location: initclass.php');
+		}
 	};
  ?>
 

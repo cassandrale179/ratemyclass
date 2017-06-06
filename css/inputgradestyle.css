@@ -201,3 +201,9 @@ th{
   width: 100px;
   border-radius: 2px;
 }
+
+#B h3{
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-left: 50px;
+  font-size: 20px;
+}

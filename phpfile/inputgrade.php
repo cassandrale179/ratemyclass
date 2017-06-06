@@ -41,6 +41,7 @@
 	</div>
 
   <div id="B">
+		<h3> <b>IMPORTANT: </b>Please do not have space between class, so enter CS171 instead of CS 171. Thank you!</h3>
     <form name="add_name" id="add_name">
       <div class="table-responsive">
         <table id="dynamic_field">

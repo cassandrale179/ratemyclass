@@ -85,13 +85,9 @@
     and $conn->query($update1) === true and $conn->query($update2) === true and $conn->query($update3)
     === true and $conn->query($check)=== true)
    {
-     $_SESSION['message'] = "Registration successful.";
      $_SESSION['logged_in'] = 1;
-     $_SESSION['minimum_class'] = 1;
-     header("location: verify.php");
+     header("location: searchpage.php");
    }
-
-
  }
 
  ?>
@@ -133,8 +129,7 @@
 
 <div>
 		<h1> What Classes Have You Taken? </h1>
-    <h4> Enter at least three classes you have taken and your grade for that class. The information you provide is private and won't be shared without your consent (see <a target="blank" href="../terms/privacy.html">Privacy Policy</a>). </h4>
-
+    <h4> Please enter at least 3 grades you have received in order to search for other grades. The information you share is private (see <a target="blank" href="../terms/privacy.html">Privacy Policy</a>).
     <form class="form form-group" action="initclass.php" method="post" enctype="multipart/form-data" autocomplete="off">
     <div id="text-before-form">
     <!-- _______________________________________FIRST ROW___________________________________________ -->
@@ -230,6 +225,7 @@
         <input type="number" class="form-control" name="year3"
         placeholder="2014">
       </div>
+      <h5><b> IMPORTANT: </b> Please capitalize class name and have no space in between (e.g CS171) </h5>
       <input type="submit" value="Submit" name="next" class="reg-btn inline" />
   </div>
 </div>
