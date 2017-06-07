@@ -84,9 +84,7 @@ else {
 		<input type="text" name="q" id="searchbar" placeholder="Type Class Name Here..." list="classes"/>
 			<datalist id="classes">
 			</datalist>
-
 	 </form>
-		</form>
 	</div>
 
 

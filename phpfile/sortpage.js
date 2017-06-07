@@ -68,7 +68,7 @@ function sortClass(){
     }
 
 
-    //----------- CREATE AN OLD ARRAY----------
+    //----------- CREATE A NEW ARRAY----------
     for (var j = 0; j < oldAvg.length; j++){
       newAvg.push(oldAvg[j]);
     }
@@ -78,9 +78,13 @@ function sortClass(){
     newAvg.sort(function(a,b){return b - a;})
 
     //----------- MAPPING FUNCTION ---------
-    for (var k = 0; k  < newAvg.length; k++){
-      for (var l = 0; l < oldAvg.length; l++){
-        if (oldAvg[l] == newAvg[k]) newClass.push(oldClass[l]);
+    for (var l = 0; l < newAvg.length; l++){
+      for (var k = 0; k < oldAvg.length; k++){
+        if (newAvg[l] == oldAvg[k] && newAvg[l] > 0){
+          newClass.push(oldClass[k]);
+          oldClass.splice(k,1);
+          oldAvg.splice(k,1);
+        }
       }
     }
 
@@ -88,7 +92,7 @@ function sortClass(){
     for (var m = 0; m < newAvg.length; m++){
       if (newAvg[m] > 3.30) colorArray.push("#117864");
       else if (newAvg[m] > 2.60) colorArray.push("#F4D03F");
-      else if (newAvg[m] > 0) colorArray.push("#922B21");
+      else if (newAvg[m] >= 0) colorArray.push("#922B21");
       else{
         colorArray.push("#424949");
       }
@@ -101,7 +105,7 @@ function sortClass(){
 
     //-------------------- DISPLAYING EASY CLASS --------------------
     if (permDifficulty == "Easy"){
-      for (var n = 0; n < newAvg.length; n++){
+      for (var n = 0; n < newClass.length; n++){
         var text = "<button style='border-left: 50px solid" + colorArray[n] + "'> <b>" + newClass[n] + " </b>(Average: " + newAvg[n] + ")</button></a><br>";
         headerdisplay.insertAdjacentHTML('beforeend', '<h1> Easy to Difficult </h1>');
         jsondisplay.insertAdjacentHTML('beforeend', text);
@@ -110,15 +114,24 @@ function sortClass(){
 
     //-------------------- DISPLAYING HARD CLASS  --------------------
     if (permDifficulty == "Difficult"){
-      for (var n = newAvg.length-1; n >= 0; n--){
+      for (var n = newClass.length-1; n >= 0; n--){
         var text = "<button style='border-left: 50px solid" + colorArray[n] + "'> <b>" + newClass[n] + " </b>(Average: " + newAvg[n] + ")</button></a><br>";
         headerdisplay.insertAdjacentHTML('beforeend', '<h1> Difficult to Easy </h1>');
         jsondisplay.insertAdjacentHTML('beforeend', text);
       }
     }
+    console.log(oldAvg);
+    console.log(newAvg);
+    console.log(oldClass);
+    console.log(newClass);
   }
   request.send();
 }
 
 pageRedirect();
 sortClass();
+
+
+
+
+{}

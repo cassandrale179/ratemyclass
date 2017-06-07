@@ -33,6 +33,12 @@
 			$c6 = mysqli_fetch_array($u6)['class'];
 			$u7 = mysqli_query($conn, "select * from score2 where id = '$largestNumber'-6");
 			$c7 = mysqli_fetch_array($u7)['class'];
+			$u8 = mysqli_query($conn, "select * from score2 where id = '$largestNumber'-7");
+			$c8 = mysqli_fetch_array($u8)['class'];
+			$u9 = mysqli_query($conn, "select * from score2 where id = '$largestNumber'-8");
+			$c9 = mysqli_fetch_array($u9)['class'];
+			$u10 = mysqli_query($conn, "select * from score2 where id = '$largestNumber'-9");
+			$c10 = mysqli_fetch_array($u10)['class'];
 
 		};
 	?>
@@ -121,6 +127,9 @@
 			echo "<li>Someone just added grade for <b>$c5</b></li>";
 			echo "<li>Someone just added grade for <b>$c6</b></li>";
 			echo "<li>Someone just added grade for <b>$c7</b></li>";
+			echo "<li>Someone just added grade for <b>$c8</b></li>";
+			echo "<li>Someone just added grade for <b>$c9</b></li>";
+			echo "<li>Someone just added grade for <b>$c10</b></li>";
 		 ?>
 	</div>
 <script type="text/javascript" src="dashboardjs.js"></script>

@@ -185,7 +185,7 @@ function courseDisplay(){
 		}
 
 		//IF CLASS IS DIFFICULT
-		else if (classavg > 0){
+		else if (classavg >= 0 && count > 0){
 			classLabel = "Hard";
 			jsondisplay.style.color = "#922B21";
 			c1 = "#7B241C";
