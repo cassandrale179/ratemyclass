@@ -103,6 +103,7 @@
 
 	<div id='B2'>
 		<canvas id='canvas' width='900' height='400'></canvas>
+		<p>This figure displayed average grade across all classes under a college (e.g the average grade of all Lebow classes are 3.92 out of 4.00)</p>
 	</div>
 
 	<!-- ___________________________ LIST OF CLASSES_______________________________________ -->
