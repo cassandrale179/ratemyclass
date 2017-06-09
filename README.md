@@ -30,7 +30,7 @@ In addition to viewing a class's difficulty, Ratemyclass also contains a built i
 ## Other Important Information
 - As this involves data sharing of user scores, Ratemyclass has a <b> Privacy Policy </b>. Check the website for more information.
 - If you have any suggestions, find a bug, or just want to comment, feel free to contact me through the contact form on the settings page or shoot me an email at mnl98x@gmail.com.
-- This project is my first, so it isn't built with any framework because I wrote all my PHP & JavaScript code from scratch. Therefore, there are still a lot of bugs in term of data performance and user interface. <b> Please DO NOT open the website on your mobile phone. </b> This website is not configured for mobile, sorry :)
+- This project is my first, so it isn't built with any framework since I wrote all my PHP & JavaScript code from scratch. Therefore, there are still some minor bugs in term of user interface and data performance. <b> Please DO NOT open the website on your mobile phone. </b> This website is not configured for mobile, sorry :)
 
 
 ## Contributing
