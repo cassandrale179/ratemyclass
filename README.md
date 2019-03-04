@@ -1,4 +1,4 @@
-# RateMyClass (www.ratemyclass.org)
+# RateMyClass
 RateMyClass is an open source project created at Drexel University that allow students to view score distribution and difficulty of a class through data crowdsourced by Drexel students. 
 
 ## How To Use
